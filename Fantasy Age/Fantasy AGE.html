@@ -1,10 +1,17 @@
 <!-- PLAYER CHARACTER SHEET -->
-<div class="container pc">
+<div class="container pc compendium-drop-target">
+	<!-- required for drag and drop from compendium -->
+	<input accept="Category" name="attr_drop_category" type="hidden" />
+	<input accept="Name" name="attr_drop_name" type="hidden" />
+	<input accept="data" name="attr_drop_data" type="hidden" />
+
 	<input type="hidden" value="1.74.0" name="attr_version-name">
-	<input type="hidden" class="gamelock" name="attr_gamelock" value="fantasy-age"> <!-- Changing this sets the sheet to only one setting or "custom" -->
+	<input type="hidden" class="gamelock" name="attr_gamelock" value="fantasy-age">
+	<!-- Changing this sets the sheet to only one setting or "custom" -->
 
 	<input class="hiddencheckbox dragon-age-button" type="checkbox" name="attr_game" value="dragon-age">
-	<input class="hiddencheckbox fantasy-age-button" type="checkbox" name="attr_game" value="fantasy-age" checked="checked">
+	<input class="hiddencheckbox fantasy-age-button" type="checkbox" name="attr_game" value="fantasy-age"
+		checked="checked">
 	<input class="hiddencheckbox fantasy-age-core-button" type="checkbox" name="attr_game" value="fantasy-age-core">
 	<input class="hiddencheckbox titansgrave-button" type="checkbox" name="attr_game" value="titansgrave">
 	<input class="hiddencheckbox blue-rose-button" type="checkbox" name="attr_game" value="blue-rose">
@@ -15,7 +22,8 @@
 	<input class="hiddencheckbox fifth-season-button" type="checkbox" name="attr_game" value="fifth-season">
 	<input class="hiddencheckbox cthulhu-awakens-button" type="checkbox" name="attr_game" value="cthulhu-awakens">
 
-	<input class="hiddencheckbox black-color-checkbox" type="checkbox" name="attr_color" value="black" checked="checked">
+	<input class="hiddencheckbox black-color-checkbox" type="checkbox" name="attr_color" value="black"
+		checked="checked">
 	<input class="hiddencheckbox red-color-checkbox" type="checkbox" name="attr_color" value="red">
 	<input class="hiddencheckbox teal1-color-checkbox" type="checkbox" name="attr_color" value="teal1">
 	<input class="hiddencheckbox teal2-color-checkbox" type="checkbox" name="attr_color" value="teal2">
@@ -54,79 +62,101 @@
 
 	<input class="hiddencheckbox aim-none-checkbox" type="checkbox" name="attr_aim-select" value="0">
 	<input class="hiddencheckbox aim-toggle-checkbox" type="checkbox" name="attr_aim-select" value="@{aim-toggle}">
-	<input class="hiddencheckbox aim-prompt-checkbox" type="checkbox" name="attr_aim-select" value="?{Using the Aim action|Yes, @{aim-value}|No, 0}">
+	<input class="hiddencheckbox aim-prompt-checkbox" type="checkbox" name="attr_aim-select"
+		value="?{Using the Aim action|Yes, @{aim-value}|No, 0}">
 	<input class="hiddencheckbox aim-always-checkbox" type="checkbox" name="attr_aim-select" value="@{aim-value}">
 
 	<input type="hidden" value="" name="attr_stunts2-code">
 	<input class="hiddencheckbox stunts2-none-checkbox" type="checkbox" name="attr_stunts2-select" value="0">
-	<input class="hiddencheckbox stunts2-toggle-checkbox" type="checkbox" name="attr_stunts2-select" value="@{stunts2-toggle}">
-	<input class="hiddencheckbox stunts2-prompt-checkbox" type="checkbox" name="attr_stunts2-select" value="?{Using the 2nd Stunt Die|Yes, d6|No, 0}">
+	<input class="hiddencheckbox stunts2-toggle-checkbox" type="checkbox" name="attr_stunts2-select"
+		value="@{stunts2-toggle}">
+	<input class="hiddencheckbox stunts2-prompt-checkbox" type="checkbox" name="attr_stunts2-select"
+		value="?{Using the 2nd Stunt Die|Yes, d6|No, 0}">
 	<input class="hiddencheckbox stunts2-always-checkbox" type="checkbox" name="attr_stunts2-select" value="d6">
 
-	<input class="tab-button tab-whisper" type="checkbox" name="attr_whisper-toggle" value="/w gm "><span data-i18n="whisper-u">WHISPER</span>
-	<input class="tab-button tab-aim" type="checkbox" name="attr_aim-toggle" value="@{aim-value}"><span data-i18n="aim-u">AIM</span>
-	<input class="tab-button tab-stunts2" type="checkbox" name="attr_stunts2-toggle" value="d6"><span data-i18n="reroll-u">REROLL</span>
+	<input class="tab-button tab-whisper" type="checkbox" name="attr_whisper-toggle" value="/w gm "><span
+		data-i18n="whisper-u">WHISPER</span>
+	<input class="tab-button tab-aim" type="checkbox" name="attr_aim-toggle" value="@{aim-value}"><span
+		data-i18n="aim-u">AIM</span>
+	<input class="tab-button tab-stunts2" type="checkbox" name="attr_stunts2-toggle" value="d6"><span
+		data-i18n="reroll-u">REROLL</span>
 
-	<input class="tab-button tab1" type="radio" name="attr_tab" value="1" checked="checked"><span data-i18n="character-u">CHARACTER</span>
+	<input class="tab-button tab1" type="radio" name="attr_tab" value="1" checked="checked"><span
+		data-i18n="character-u">CHARACTER</span>
 	<input class="tab-button tab2" type="radio" name="attr_tab" value="2"><span data-i18n="persona-u">PERSONA</span>
-	<input class="tab-button tab3" type="radio" name="attr_tab" value="3"><span data-i18n="class-u" class="class-tab-span">CLASS</span><span data-i18n="qualities-u" class="qualities-tab-span">QUALITIES</span>
+	<input class="tab-button tab3" type="radio" name="attr_tab" value="3"><span data-i18n="class-u"
+		class="class-tab-span">CLASS</span><span data-i18n="qualities-u" class="qualities-tab-span">QUALITIES</span>
 	<input class="tab-button tab4" type="radio" name="attr_tab" value="4"><span data-i18n="talents-u">TALENTS</span>
 	<input class="tab-button tab5" type="radio" name="attr_tab" value="5"><span data-i18n="focuses-u">FOCUSES</span>
-	<input class="tab-button tab6" type="radio" name="attr_tab" value="6"><span data-i18n="magic-u" class="magic-tab-span">MAGIC</span><span data-i18n="arcana-u" class="arcana-tab-span">ARCANA</span><span class="extraordinary-tab-span" data-i18n="extraordinary-u">EXTRAORDINARY</span><span data-i18n="psychic-u" class="psychic-tab-span">PSYCHIC</span>
+	<input class="tab-button tab6" type="radio" name="attr_tab" value="6"><span data-i18n="magic-u"
+		class="magic-tab-span">MAGIC</span><span data-i18n="arcana-u" class="arcana-tab-span">ARCANA</span><span
+		class="extraordinary-tab-span" data-i18n="extraordinary-u">EXTRAORDINARY</span><span data-i18n="psychic-u"
+		class="psychic-tab-span">PSYCHIC</span>
 	<input class="tab-button tab7" type="radio" name="attr_tab" value="7"><span style="font-family: pictos">y</span>
 
-	<button name="act_dice-roller" class="floating-dice-roller" type="action" data-i18n-title="main-roll-button-title" title="This is the roll-builder. You can click it, answer four questions, and then it will roll the dice for you."></button>
+	<button name="act_dice-roller" class="floating-dice-roller" type="action" data-i18n-title="main-roll-button-title"
+		title="This is the roll-builder. You can click it, answer four questions, and then it will roll the dice for you."></button>
 
 	<!-- HEADER -->
 	<div class="page tab1 tab2 tab3 tab4 tab5 tab6 tab7">
 		<div class="header">
 			<div class="name-container dragon-age-selected">
-				<img src="http://i.imgur.com/mIWakqc.png" style="width: 207px;height: 40px;margin-left:23px;" alt="Dragon Age">
+				<img src="http://i.imgur.com/mIWakqc.png" style="width: 207px;height: 40px;margin-left:23px;"
+					alt="Dragon Age">
 				<input type="text" name="attr_character_name">
 				<span data-i18n="char-name-u">CHARACTER NAME</span>
 			</div>
 			<div class="name-container fantasy-age-selected fantasy-age-core-selected">
-				<img src="http://i.imgur.com/O3vrAHe.png" style="width: 229px;height: 40px;margin-left:10px;" alt="Fantasy AGE">
+				<img src="http://i.imgur.com/O3vrAHe.png" style="width: 229px;height: 40px;margin-left:10px;"
+					alt="Fantasy AGE">
 				<input type="text" name="attr_character_name">
 				<span data-i18n="char-name-u">CHARACTER NAME</span>
 			</div>
 			<div class="name-container titansgrave-selected">
-				<img src="http://i.imgur.com/PzyyWUe.png" style="width: 102px;height: 40px;margin-left:70px;" alt="Titansgrave">
+				<img src="http://i.imgur.com/PzyyWUe.png" style="width: 102px;height: 40px;margin-left:70px;"
+					alt="Titansgrave">
 				<input type="text" name="attr_character_name">
 				<span data-i18n="char-name-u">CHARACTER NAME</span>
 			</div>
 			<div class="name-container blue-rose-selected">
-				<img src="http://i.imgur.com/DXARIqr.png" style="width: 175px;height: 40px;margin-left:40px;" alt="Blue Rose">
+				<img src="http://i.imgur.com/DXARIqr.png" style="width: 175px;height: 40px;margin-left:40px;"
+					alt="Blue Rose">
 				<input type="text" name="attr_character_name">
 				<span data-i18n="char-name-u">CHARACTER NAME</span>
 			</div>
 			<div class="name-container the-expanse-selected">
-				<img src="https://i.imgur.com/UeRkQfG.png" style="width: 175px;height: 40px;margin-left:40px;" alt="The Expanse">
+				<img src="https://i.imgur.com/UeRkQfG.png" style="width: 175px;height: 40px;margin-left:40px;"
+					alt="The Expanse">
 				<input type="text" name="attr_character_name">
 				<span data-i18n="char-name-u">CHARACTER NAME</span>
 			</div>
 			<div class="name-container modern-age-selected">
-				<img src="https://i.imgur.com/NO0qlu8.png" style="width: 175px;height: 40px;margin-left:40px;" alt="Modern AGE">
+				<img src="https://i.imgur.com/NO0qlu8.png" style="width: 175px;height: 40px;margin-left:40px;"
+					alt="Modern AGE">
 				<input type="text" name="attr_character_name">
 				<span data-i18n="char-name-u">CHARACTER NAME</span>
 			</div>
 			<div class="name-container threefold-selected">
-				<img src="https://i.imgur.com/L7nEs5V.png" style="width: 175px;height: 40px;margin-left:40px;" alt="Threefold">
+				<img src="https://i.imgur.com/L7nEs5V.png" style="width: 175px;height: 40px;margin-left:40px;"
+					alt="Threefold">
 				<input type="text" name="attr_character_name">
 				<span data-i18n="char-name-u">CHARACTER NAME</span>
 			</div>
 			<div class="name-container world-of-lazarus-selected">
-				<img src="https://i.imgur.com/6lraK01.png" style="width: 175px;height: 40px;margin-left:40px;" alt="World of Lazarus">
+				<img src="https://i.imgur.com/6lraK01.png" style="width: 175px;height: 40px;margin-left:40px;"
+					alt="World of Lazarus">
 				<input type="text" name="attr_character_name">
 				<span data-i18n="char-name-u">CHARACTER NAME</span>
 			</div>
 			<div class="name-container fifth-season-selected">
-				<img src="https://imgur.com/6V2HgyI.png" style="width: 185px;height: 40px;margin-left:30px;" alt="Modern AGE">
+				<img src="https://imgur.com/6V2HgyI.png" style="width: 185px;height: 40px;margin-left:30px;"
+					alt="Modern AGE">
 				<input type="text" name="attr_character_name">
 				<span data-i18n="char-name-u">CHARACTER NAME</span>
 			</div>
 			<div class="name-container cthulhu-awakens-selected">
-				<img src="https://imgur.com/BF3GPxC.png" style="width: 155px;height: 40px;margin-left:50px;" alt="Modern AGE">
+				<img src="https://imgur.com/BF3GPxC.png" style="width: 155px;height: 40px;margin-left:50px;"
+					alt="Modern AGE">
 				<input type="text" name="attr_character_name">
 				<span data-i18n="char-name-u">CHARACTER NAME</span>
 			</div>
@@ -212,7 +242,8 @@
 				</div>
 				<div class="top the-expanse-selected">
 					<div class="info-container">
-						<input type="number" class="class-level" name="attr_level" value="1" style="padding-top: 5px; width: 36px;">
+						<input type="number" class="class-level" name="attr_level" value="1"
+							style="padding-top: 5px; width: 36px;">
 						<span data-i18n="level-u">LEVEL</span>
 					</div>
 					<div class="info-container">
@@ -263,7 +294,8 @@
 						<span data-i18n="drive-u">DRIVE</span>
 					</div>
 				</div>
-				<div class="bottom old-age-selected fantasy-age-core-selected the-expanse-selected modern-age-selected fifth-season-selected cthulhu-awakens-selected">
+				<div
+					class="bottom old-age-selected fantasy-age-core-selected the-expanse-selected modern-age-selected fifth-season-selected cthulhu-awakens-selected">
 					<div class="info-container">
 						<input type="text" name="attr_age" style="width: 120px;">
 						<span data-i18n="age-u">AGE</span>
@@ -589,17 +621,21 @@
 							<div class="col left-ability-container">
 								<div class="section-name focuses-section">
 									<div class="col ability-name">
-										<button class="abilities-buttons" name="act_accuracy_check" type="action" data-i18n="accuracy-u">ACCURACY</button>
+										<button class="abilities-buttons" name="act_accuracy_check" type="action"
+											data-i18n="accuracy-u">ACCURACY</button>
 									</div>
 									<div class="col primary-checkbox">
-										<input type="checkbox" name="attr_primary_accuracy"/><span></span>
+										<input type="checkbox" name="attr_primary_accuracy" /><span></span>
 									</div>
 								</div>
 								<div class="ability-focus-list">
 									<fieldset class="repeating_accuracy-focus">
 										<input type="hidden" name="attr_focusname">
 										<input type="hidden" name="attr_focusbonus" value="2">
-										<button class="focus-buttons" name="act_focus-check" type="action"><span name="attr_focusname"></span><span> (</span><span name="attr_focusbonus"></span><span>)</span></button><span class="focus-comma">,</span>
+										<button class="focus-buttons" name="act_focus-check" type="action"><span
+												name="attr_focusname"></span><span> (</span><span
+												name="attr_focusbonus"></span><span>)</span></button><span
+											class="focus-comma">,</span>
 									</fieldset>
 								</div>
 							</div>
@@ -613,17 +649,21 @@
 						<div class="col left-ability-container">
 							<div class="section-name focuses-section">
 								<div class="col ability-name">
-									<button class="abilities-buttons" name="act_communication_check" type="action" data-i18n="communication-u">COMMUNICATION</button>
+									<button class="abilities-buttons" name="act_communication_check" type="action"
+										data-i18n="communication-u">COMMUNICATION</button>
 								</div>
 								<div class="col primary-checkbox">
-									<input type="checkbox" name="attr_primary_communication"/><span></span>
+									<input type="checkbox" name="attr_primary_communication" /><span></span>
 								</div>
 							</div>
 							<div class="ability-focus-list">
 								<fieldset class="repeating_communication-focus">
 									<input type="hidden" name="attr_focusname">
 									<input type="hidden" name="attr_focusbonus" value="2">
-									<button class="focus-buttons" name="act_focus-check" type="action"><span name="attr_focusname"></span><span> (</span><span name="attr_focusbonus"></span><span>)</span></button><span class="focus-comma">,</span>
+									<button class="focus-buttons" name="act_focus-check" type="action"><span
+											name="attr_focusname"></span><span> (</span><span
+											name="attr_focusbonus"></span><span>)</span></button><span
+										class="focus-comma">,</span>
 								</fieldset>
 							</div>
 						</div>
@@ -636,17 +676,21 @@
 						<div class="col left-ability-container">
 							<div class="section-name focuses-section">
 								<div class="col ability-name">
-									<button class="abilities-buttons" name="act_constitution_check" type="action" data-i18n="constitution-u">CONSTITUTION</button>
+									<button class="abilities-buttons" name="act_constitution_check" type="action"
+										data-i18n="constitution-u">CONSTITUTION</button>
 								</div>
 								<div class="col primary-checkbox">
-									<input type="checkbox" name="attr_primary_constitution"/><span></span>
+									<input type="checkbox" name="attr_primary_constitution" /><span></span>
 								</div>
 							</div>
 							<div class="ability-focus-list">
 								<fieldset class="repeating_constitution-focus">
 									<input type="hidden" name="attr_focusname">
 									<input type="hidden" name="attr_focusbonus" value="2">
-									<button class="focus-buttons" name="act_focus-check" type="action"><span name="attr_focusname"></span><span> (</span><span name="attr_focusbonus"></span><span>)</span></button><span class="focus-comma">,</span>
+									<button class="focus-buttons" name="act_focus-check" type="action"><span
+											name="attr_focusname"></span><span> (</span><span
+											name="attr_focusbonus"></span><span>)</span></button><span
+										class="focus-comma">,</span>
 								</fieldset>
 							</div>
 						</div>
@@ -659,17 +703,21 @@
 						<div class="col left-ability-container">
 							<div class="section-name focuses-section">
 								<div class="col ability-name">
-									<button class="abilities-buttons" name="act_cunning_check" type="action" data-i18n="cunning-u">CUNNING</button>
+									<button class="abilities-buttons" name="act_cunning_check" type="action"
+										data-i18n="cunning-u">CUNNING</button>
 								</div>
 								<div class="col primary-checkbox">
-									<input type="checkbox" name="attr_primary_cunning"/><span></span>
+									<input type="checkbox" name="attr_primary_cunning" /><span></span>
 								</div>
 							</div>
 							<div class="ability-focus-list">
 								<fieldset class="repeating_cunning-focus">
 									<input type="hidden" name="attr_focusname">
 									<input type="hidden" name="attr_focusbonus" value="2">
-									<button class="focus-buttons" name="act_focus-check" type="action"><span name="attr_focusname"></span><span> (</span><span name="attr_focusbonus"></span><span>)</span></button><span class="focus-comma">,</span>
+									<button class="focus-buttons" name="act_focus-check" type="action"><span
+											name="attr_focusname"></span><span> (</span><span
+											name="attr_focusbonus"></span><span>)</span></button><span
+										class="focus-comma">,</span>
 								</fieldset>
 							</div>
 						</div>
@@ -682,20 +730,27 @@
 						<div class="col left-ability-container">
 							<div class="section-name focuses-section">
 								<div class="col ability-name half-ability-name">
-									<button class="abilities-buttons" name="act_dexterity_check" type="action" data-i18n="dexterity-u">DEXTERITY</button>
+									<button class="abilities-buttons" name="act_dexterity_check" type="action"
+										data-i18n="dexterity-u">DEXTERITY</button>
 								</div>
 								<div class="col ability-name half-ability-name">
-									<button class="initiative-section" name="act_initiative_check" type="action"><span style="display:inline" data-i18n="initiative"></span><span style="display:inline"> (</span><span style="display:inline" name="attr_init-bonus"></span><span style="display:inline">)</span></button>
+									<button class="initiative-section" name="act_initiative_check" type="action"><span
+											style="display:inline" data-i18n="initiative"></span><span
+											style="display:inline"> (</span><span style="display:inline"
+											name="attr_init-bonus"></span><span style="display:inline">)</span></button>
 								</div>
 								<div class="col primary-checkbox">
-									<input type="checkbox" name="attr_primary_dexterity"/><span></span>
+									<input type="checkbox" name="attr_primary_dexterity" /><span></span>
 								</div>
 							</div>
 							<div class="ability-focus-list">
 								<fieldset class="repeating_dexterity-focus">
 									<input type="hidden" name="attr_focusname">
 									<input type="hidden" name="attr_focusbonus" value="2">
-									<button class="focus-buttons" name="act_focus-check" type="action"><span name="attr_focusname"></span><span> (</span><span name="attr_focusbonus"></span><span>)</span></button><span class="focus-comma">,</span>
+									<button class="focus-buttons" name="act_focus-check" type="action"><span
+											name="attr_focusname"></span><span> (</span><span
+											name="attr_focusbonus"></span><span>)</span></button><span
+										class="focus-comma">,</span>
 								</fieldset>
 							</div>
 						</div>
@@ -705,21 +760,26 @@
 						<input type="hidden" name="attr_initiative" value="0">
 					</div>
 					<!-- Fighting -->
-					<div class="ability-container second-gen-selected the-expanse-selected mod-selected ability-fighting">
+					<div
+						class="ability-container second-gen-selected the-expanse-selected mod-selected ability-fighting">
 						<div class="col left-ability-container">
 							<div class="section-name focuses-section">
 								<div class="col ability-name">
-									<button class="abilities-buttons" name="act_fighting_check" type="action" data-i18n="fighting-u">FIGHTING</button>
+									<button class="abilities-buttons" name="act_fighting_check" type="action"
+										data-i18n="fighting-u">FIGHTING</button>
 								</div>
 								<div class="col primary-checkbox">
-									<input type="checkbox" name="attr_primary_fighting"/><span></span>
+									<input type="checkbox" name="attr_primary_fighting" /><span></span>
 								</div>
 							</div>
 							<div class="ability-focus-list">
 								<fieldset class="repeating_fighting-focus">
 									<input type="hidden" name="attr_focusname">
 									<input type="hidden" name="attr_focusbonus" value="2">
-									<button class="focus-buttons" name="act_focus-check" type="action"><span name="attr_focusname"></span><span> (</span><span name="attr_focusbonus"></span><span>)</span></button><span class="focus-comma">,</span>
+									<button class="focus-buttons" name="act_focus-check" type="action"><span
+											name="attr_focusname"></span><span> (</span><span
+											name="attr_focusbonus"></span><span>)</span></button><span
+										class="focus-comma">,</span>
 								</fieldset>
 							</div>
 						</div>
@@ -728,21 +788,26 @@
 						</div>
 					</div>
 					<!-- Intelligence -->
-					<div class="ability-container second-gen-selected the-expanse-selected mod-selected ability-intelligence">
+					<div
+						class="ability-container second-gen-selected the-expanse-selected mod-selected ability-intelligence">
 						<div class="col left-ability-container">
 							<div class="section-name focuses-section">
 								<div class="col ability-name">
-									<button class="abilities-buttons" name="act_intelligence_check" type="action" data-i18n="intelligence-u">INTELLIGENCE</button>
+									<button class="abilities-buttons" name="act_intelligence_check" type="action"
+										data-i18n="intelligence-u">INTELLIGENCE</button>
 								</div>
 								<div class="col primary-checkbox">
-									<input type="checkbox" name="attr_primary_intelligence"/><span></span>
+									<input type="checkbox" name="attr_primary_intelligence" /><span></span>
 								</div>
 							</div>
 							<div class="ability-focus-list">
 								<fieldset class="repeating_intelligence-focus">
 									<input type="hidden" name="attr_focusname">
 									<input type="hidden" name="attr_focusbonus" value="2">
-									<button class="focus-buttons" name="act_focus-check" type="action"><span name="attr_focusname"></span><span> (</span><span name="attr_focusbonus"></span><span>)</span></button><span class="focus-comma">,</span>
+									<button class="focus-buttons" name="act_focus-check" type="action"><span
+											name="attr_focusname"></span><span> (</span><span
+											name="attr_focusbonus"></span><span>)</span></button><span
+										class="focus-comma">,</span>
 								</fieldset>
 							</div>
 						</div>
@@ -755,17 +820,21 @@
 						<div class="col left-ability-container">
 							<div class="section-name focuses-section">
 								<div class="col ability-name">
-									<button class="abilities-buttons" name="act_magic_check" type="action" data-i18n="magic-u">MAGIC</button>
+									<button class="abilities-buttons" name="act_magic_check" type="action"
+										data-i18n="magic-u">MAGIC</button>
 								</div>
 								<div class="col primary-checkbox">
-									<input type="checkbox" name="attr_primary_magic"/><span></span>
+									<input type="checkbox" name="attr_primary_magic" /><span></span>
 								</div>
 							</div>
 							<div class="ability-focus-list">
 								<fieldset class="repeating_magic-focus">
 									<input type="hidden" name="attr_focusname">
 									<input type="hidden" name="attr_focusbonus" value="2">
-									<button class="focus-buttons" name="act_focus-check" type="action"><span name="attr_focusname"></span><span> (</span><span name="attr_focusbonus"></span><span>)</span></button><span class="focus-comma">,</span>
+									<button class="focus-buttons" name="act_focus-check" type="action"><span
+											name="attr_focusname"></span><span> (</span><span
+											name="attr_focusbonus"></span><span>)</span></button><span
+										class="focus-comma">,</span>
 								</fieldset>
 							</div>
 						</div>
@@ -778,17 +847,21 @@
 						<div class="col left-ability-container">
 							<div class="section-name focuses-section">
 								<div class="col ability-name">
-									<button class="abilities-buttons" name="act_perception_check" type="action" data-i18n="perception-u">PERCEPTION</button>
+									<button class="abilities-buttons" name="act_perception_check" type="action"
+										data-i18n="perception-u">PERCEPTION</button>
 								</div>
 								<div class="col primary-checkbox">
-									<input type="checkbox" name="attr_primary_perception"/><span></span>
+									<input type="checkbox" name="attr_primary_perception" /><span></span>
 								</div>
 							</div>
 							<div class="ability-focus-list">
 								<fieldset class="repeating_perception-focus">
 									<input type="hidden" name="attr_focusname">
 									<input type="hidden" name="attr_focusbonus" value="2">
-									<button class="focus-buttons" name="act_focus-check" type="action"><span name="attr_focusname"></span><span> (</span><span name="attr_focusbonus"></span><span>)</span></button><span class="focus-comma">,</span>
+									<button class="focus-buttons" name="act_focus-check" type="action"><span
+											name="attr_focusname"></span><span> (</span><span
+											name="attr_focusbonus"></span><span>)</span></button><span
+										class="focus-comma">,</span>
 								</fieldset>
 							</div>
 						</div>
@@ -801,17 +874,21 @@
 						<div class="col left-ability-container">
 							<div class="section-name focuses-section">
 								<div class="col ability-name">
-									<button class="abilities-buttons" name="act_strength_check" type="action" data-i18n="strength-u">STRENGTH</button>
+									<button class="abilities-buttons" name="act_strength_check" type="action"
+										data-i18n="strength-u">STRENGTH</button>
 								</div>
 								<div class="col primary-checkbox">
-									<input type="checkbox" name="attr_primary_strength"/><span></span>
+									<input type="checkbox" name="attr_primary_strength" /><span></span>
 								</div>
 							</div>
 							<div class="ability-focus-list">
 								<fieldset class="repeating_strength-focus">
 									<input type="hidden" name="attr_focusname">
 									<input type="hidden" name="attr_focusbonus" value="2">
-									<button class="focus-buttons" name="act_focus-check" type="action"><span name="attr_focusname"></span><span> (</span><span name="attr_focusbonus"></span><span>)</span></button><span class="focus-comma">,</span>
+									<button class="focus-buttons" name="act_focus-check" type="action"><span
+											name="attr_focusname"></span><span> (</span><span
+											name="attr_focusbonus"></span><span>)</span></button><span
+										class="focus-comma">,</span>
 								</fieldset>
 							</div>
 						</div>
@@ -824,17 +901,21 @@
 						<div class="col left-ability-container">
 							<div class="section-name focuses-section">
 								<div class="col ability-name">
-									<button class="abilities-buttons" name="act_willpower_check" type="action" data-i18n="willpower-u">WILLPOWER</button>
+									<button class="abilities-buttons" name="act_willpower_check" type="action"
+										data-i18n="willpower-u">WILLPOWER</button>
 								</div>
 								<div class="col primary-checkbox">
-									<input type="checkbox" name="attr_primary_willpower"/><span></span>
+									<input type="checkbox" name="attr_primary_willpower" /><span></span>
 								</div>
 							</div>
 							<div class="ability-focus-list">
 								<fieldset class="repeating_willpower-focus">
 									<input type="hidden" name="attr_focusname">
 									<input type="hidden" name="attr_focusbonus" value="2">
-									<button class="focus-buttons" name="act_focus-check" type="action"><span name="attr_focusname"></span><span> (</span><span name="attr_focusbonus"></span><span>)</span></button><span class="focus-comma">,</span>
+									<button class="focus-buttons" name="act_focus-check" type="action"><span
+											name="attr_focusname"></span><span> (</span><span
+											name="attr_focusbonus"></span><span>)</span></button><span
+										class="focus-comma">,</span>
 								</fieldset>
 							</div>
 						</div>
@@ -972,10 +1053,12 @@
 					<div class="section sectionfourth income-section">
 						<div class="section-name">
 							<div class="no-the-expanse-selected">
-								<button class="abilities-buttons" data-i18n="resources-u" name="act_resources_check" type="action">RESOURCES</button>
+								<button class="abilities-buttons" data-i18n="resources-u" name="act_resources_check"
+									type="action">RESOURCES</button>
 							</div>
 							<div class="the-expanse-selected">
-								<button class="abilities-buttons" data-i18n="income-u" name="act_income_check" type="action">INCOME</button>
+								<button class="abilities-buttons" data-i18n="income-u" name="act_income_check"
+									type="action">INCOME</button>
 							</div>
 						</div>
 						<div class="income-score">
@@ -1107,70 +1190,97 @@
 							</div>
 						</div>
 						<div class="col sectiononethird">
-							<div class="condition-checkbox"><input type="checkbox" name="attr_blinded-condition"><span data-i18n="blinded">Blinded</span></div>
+							<div class="condition-checkbox"><input type="checkbox" name="attr_blinded-condition"><span
+									data-i18n="blinded">Blinded</span></div>
 						</div>
 						<div class="col sectiononethird second-gen-selected cthulhu-awakens-selected">
-							<div class="condition-checkbox"><input type="checkbox" name="attr_confused-condition"><span data-i18n="confused">Confused</span></div>
+							<div class="condition-checkbox"><input type="checkbox" name="attr_confused-condition"><span
+									data-i18n="confused">Confused</span></div>
 						</div>
 						<div class="col sectiononethird">
-							<div class="condition-checkbox"><input type="checkbox" name="attr_deafened-condition"><span data-i18n="deafened">Deafened</span></div>
+							<div class="condition-checkbox"><input type="checkbox" name="attr_deafened-condition"><span
+									data-i18n="deafened">Deafened</span></div>
 						</div>
 						<div class="col sectiononethird second-gen-selected mod-selected">
-							<div class="condition-checkbox"><input type="checkbox" name="attr_defenseless-condition"><span data-i18n="defenseless">Defenseless</span></div>
+							<div class="condition-checkbox"><input type="checkbox"
+									name="attr_defenseless-condition"><span data-i18n="defenseless">Defenseless</span>
+							</div>
 						</div>
 						<div class="col sectiononethird the-expanse-selected">
-							<div class="condition-checkbox"><input type="checkbox" name="attr_dying-select"><span data-i18n="dying">Dying</span></div>
+							<div class="condition-checkbox"><input type="checkbox" name="attr_dying-select"><span
+									data-i18n="dying">Dying</span></div>
 						</div>
 						<div class="col sectiononethird the-expanse-selected">
-							<div class="condition-checkbox"><input type="checkbox" name="attr_fatigue" value="3"><span data-i18n="exhausted">Exhausted</span></div>
+							<div class="condition-checkbox"><input type="checkbox" name="attr_fatigue" value="3"><span
+									data-i18n="exhausted">Exhausted</span></div>
 						</div>
 						<div class="col sectiononethird the-expanse-selected">
-							<div class="condition-checkbox"><input type="checkbox" name="attr_fatigue" value="2"><span data-i18n="fatigued">Fatigued</span></div>
+							<div class="condition-checkbox"><input type="checkbox" name="attr_fatigue" value="2"><span
+									data-i18n="fatigued">Fatigued</span></div>
 						</div>
 						<div class="col sectiononethird the-expanse-selected">
-							<div class="condition-checkbox"><input type="checkbox" name="attr_freefalling-condition"><span data-i18n="freefalling">Free Falling</span></div>
+							<div class="condition-checkbox"><input type="checkbox"
+									name="attr_freefalling-condition"><span data-i18n="freefalling">Free Falling</span>
+							</div>
 						</div>
 						<div class="col sectiononethird second-gen-selected fifth-season-selected">
-							<div class="condition-checkbox"><input type="checkbox" name="attr_frightened-condition"><span data-i18n="frightened">Frightened</span></div>
+							<div class="condition-checkbox"><input type="checkbox"
+									name="attr_frightened-condition"><span data-i18n="frightened">Frightened</span>
+							</div>
 						</div>
 						<div class="col sectiononethird">
-							<div class="condition-checkbox"><input type="checkbox" name="attr_helpless-select"><span data-i18n="helpless">Helpless</span></div>
+							<div class="condition-checkbox"><input type="checkbox" name="attr_helpless-select"><span
+									data-i18n="helpless">Helpless</span></div>
 						</div>
 						<div class="col sectiononethird no-cthulhu-awakens-selected">
-							<div class="condition-checkbox"><input type="checkbox" name="attr_hindered-select"><span data-i18n="hindered">Hindered</span></div>
+							<div class="condition-checkbox"><input type="checkbox" name="attr_hindered-select"><span
+									data-i18n="hindered">Hindered</span></div>
 						</div>
 						<div class="col sectiononethird second-gen-selected">
-							<div class="condition-checkbox"><input type="checkbox" name="attr_influenced-condition"><span data-i18n="influenced">Influenced</span></div>
+							<div class="condition-checkbox"><input type="checkbox"
+									name="attr_influenced-condition"><span data-i18n="influenced">Influenced</span>
+							</div>
 						</div>
 						<div class="col sectiononethird fortune-section">
-							<div class="condition-checkbox"><input type="checkbox" name="attr_injured-select"><span data-i18n="injured">Injured</span></div>
+							<div class="condition-checkbox"><input type="checkbox" name="attr_injured-select"><span
+									data-i18n="injured">Injured</span></div>
 						</div>
 						<div class="col sectiononethird cthulhu-awakens-selected">
-							<div class="condition-checkbox"><input type="checkbox" name="attr_maimed-condition"><span data-i18n="maimed">Maimed</span></div>
+							<div class="condition-checkbox"><input type="checkbox" name="attr_maimed-condition"><span
+									data-i18n="maimed">Maimed</span></div>
 						</div>
 						<div class="col sectiononethird">
-							<div class="condition-checkbox"><input type="checkbox" name="attr_prone-select"><span data-i18n="prone">Prone</span></div>
+							<div class="condition-checkbox"><input type="checkbox" name="attr_prone-select"><span
+									data-i18n="prone">Prone</span></div>
 						</div>
 						<div class="col sectiononethird the-expanse-selected">
-							<div class="condition-checkbox"><input type="checkbox" name="attr_restrained-select"><span data-i18n="restrained">Restrained</span></div>
+							<div class="condition-checkbox"><input type="checkbox" name="attr_restrained-select"><span
+									data-i18n="restrained">Restrained</span></div>
 						</div>
 						<div class="col sectiononethird second-gen-selected cthulhu-awakens-selected">
-							<div class="condition-checkbox"><input type="checkbox" name="attr_scarred-condition"><span data-i18n="scarred">Scarred</span></div>
+							<div class="condition-checkbox"><input type="checkbox" name="attr_scarred-condition"><span
+									data-i18n="scarred">Scarred</span></div>
 						</div>
 						<div class="col sectiononethird second-gen-selected">
-							<div class="condition-checkbox"><input type="checkbox" name="attr_slowed-condition"><span data-i18n="slowed">Slowed</span></div>
+							<div class="condition-checkbox"><input type="checkbox" name="attr_slowed-condition"><span
+									data-i18n="slowed">Slowed</span></div>
 						</div>
 						<div class="col sectiononethird second-gen-selected fifth-season-selected">
-							<div class="condition-checkbox"><input type="checkbox" name="attr_stunned-condition"><span data-i18n="stunned">Stunned</span></div>
+							<div class="condition-checkbox"><input type="checkbox" name="attr_stunned-condition"><span
+									data-i18n="stunned">Stunned</span></div>
 						</div>
 						<div class="col sectiononethird">
-							<div class="condition-checkbox"><input type="checkbox" name="attr_unconscious-select"><span data-i18n="unconscious">Unconscious</span></div>
+							<div class="condition-checkbox"><input type="checkbox" name="attr_unconscious-select"><span
+									data-i18n="unconscious">Unconscious</span></div>
 						</div>
 						<div class="col sectiononethird fortune-section">
-							<div class="condition-checkbox"><input type="checkbox" name="attr_wounded-select"><span data-i18n="wounded">Wounded</span></div>
+							<div class="condition-checkbox"><input type="checkbox" name="attr_wounded-select"><span
+									data-i18n="wounded">Wounded</span></div>
 						</div>
 						<div class="col sectiontwothirds cthulhu-awakens-selected">
-							<div class="condition-checkbox"><input type="checkbox" name="attr_disadvantaged-condition"><span data-i18n="general-disadvantage">General Disadvantage</span></div>
+							<div class="condition-checkbox"><input type="checkbox"
+									name="attr_disadvantaged-condition"><span data-i18n="general-disadvantage">General
+									Disadvantage</span></div>
 						</div>
 					</div>
 				</div>
@@ -1220,7 +1330,8 @@
 							</div>
 						</fieldset>
 						<div class="col-weapon-groups">
-							<input type="text" data-i18n-placeholder="weapon_groups" placeholder="Weapon groups" name="attr_weapon-groups">
+							<input type="text" data-i18n-placeholder="weapon_groups" placeholder="Weapon groups"
+								name="attr_weapon-groups">
 						</div>
 					</div>
 				</div>
@@ -1231,7 +1342,8 @@
 							<div class="col repeatingcol power-short-name old-age-selected fantasy-age-core-selected">
 								<span data-i18n="class-power-u">CLASS POWER</span>
 							</div>
-							<div class="col repeatingcol power-short-name mod-selected blue-rose-selected the-expanse-selected">
+							<div
+								class="col repeatingcol power-short-name mod-selected blue-rose-selected the-expanse-selected">
 								<span data-i18n="quality-u">QUALITY</span>
 							</div>
 							<div class="col repeatingcol power-short-description">
@@ -1286,7 +1398,8 @@
 								<textarea name="attr_talent3description"></textarea>
 							</div>
 							<div class="col repeatingcol talent-name degree4">
-								<input type="text" name="attr_powername"> (<span data-i18n="grandmaster-u">GRANDMASTER</span>)
+								<input type="text" name="attr_powername"> (<span
+									data-i18n="grandmaster-u">GRANDMASTER</span>)
 							</div>
 							<div class="col repeatingcol power-short-description degree4">
 								<textarea name="attr_talent4description"></textarea>
@@ -1303,7 +1416,8 @@
 				<!-- SHORT SPELLS -->
 				<div class="row">
 					<div class="spell-short-divtohide">
-						<div class="section sectionfull spell-short-container old-age-selected fantasy-age-core-selected">
+						<div
+							class="section sectionfull spell-short-container old-age-selected fantasy-age-core-selected">
 							<div class="section-name">
 								<div class="col repeatingcol spell-short-name">
 									<span data-i18n="spell-name-u">SPELL NAME</span>
@@ -1318,7 +1432,8 @@
 								<input type="hidden" name="attr_spell-tn">
 								<input type="hidden" name="attr_spell-spellpower">
 								<div class="col repeatingcol spell-short-name">
-									<button class="spell-magic-buttons" name="act_main-spell-check" type="action"><span name="attr_spell-name"></span></button>
+									<button class="spell-magic-buttons" name="act_main-spell-check" type="action"><span
+											name="attr_spell-name"></span></button>
 								</div>
 								<div class="col repeatingcol spell-short-description">
 									<textarea name="attr_short-spell-description"></textarea>
@@ -1330,7 +1445,7 @@
 								<div class="col repeatingcol spell-short-name">
 									<span data-i18n="arcanum-name-u">ARCANUM NAME</span>
 								</div>
-								<div class="col repeatingcol spell-short-description">
+								<div class="col repeatingcol short-spell-description">
 									<span data-i18n="short-description-u">SHORT DESCRIPTION</span>
 								</div>
 							</div>
@@ -1341,7 +1456,8 @@
 								<input type="hidden" name="attr_spell-tn">
 								<input type="hidden" name="attr_spell-fatigue">
 								<div class="col repeatingcol spell-short-name">
-									<button class="spell-magic-buttons" name="act_alternate-spell-check" type="action"><span name="attr_spell-name"></span></button>
+									<button class="spell-magic-buttons" name="act_alternate-spell-check"
+										type="action"><span name="attr_spell-name"></span></button>
 								</div>
 								<div class="col repeatingcol spell-short-description">
 									<textarea name="attr_short-spell-description"></textarea>
@@ -1350,7 +1466,8 @@
 						</div>
 						<div class="section sectionfull spell-short-container modern-age-selected">
 							<div class="section-name">
-								<div class="col repeatingcol spell-short-name"><span data-i18n="extraordinary-u">EXTRAORDINARY</span></div>
+								<div class="col repeatingcol spell-short-name"><span
+										data-i18n="extraordinary-u">EXTRAORDINARY</span></div>
 								<div class="col repeatingcol spell-short-description">
 									<span data-i18n="short-description-u">SHORT DESCRIPTION</span>
 								</div>
@@ -1362,18 +1479,25 @@
 								<input type="hidden" name="attr_spell-tn">
 								<input type="hidden" name="attr_spell-fatigue">
 								<input type="hidden" name="attr_spell-mp-cost">
-								<input type="checkbox" class="hiddencheckbox spell-method-uses-fatigue" name="attr_spell-method" value="fatigue">
-								<input type="checkbox" class="hiddencheckbox spell-method-uses-points" name="attr_spell-method" value="points">
+								<input type="checkbox" class="hiddencheckbox spell-method-uses-fatigue"
+									name="attr_spell-method" value="fatigue">
+								<input type="checkbox" class="hiddencheckbox spell-method-uses-points"
+									name="attr_spell-method" value="points">
 								<div class="col repeatingcol spell-short-name">
-									<button class="spell-magic-buttons spell-uses-fatigue" name="act_alternate-spell-check" type="action"><span name="attr_spell-name"></span></button>
-									<button class="spell-magic-buttons spell-uses-points" name="act_main-spell-check" type="action"><span name="attr_spell-name"></span></button>
+									<button class="spell-magic-buttons spell-uses-fatigue"
+										name="act_alternate-spell-check" type="action"><span
+											name="attr_spell-name"></span></button>
+									<button class="spell-magic-buttons spell-uses-points" name="act_main-spell-check"
+										type="action"><span name="attr_spell-name"></span></button>
 								</div>
-								<div class="col repeatingcol spell-short-description"> <textarea name="attr_short-spell-description"></textarea> </div>
+								<div class="col repeatingcol spell-short-description"> <textarea
+										name="attr_short-spell-description"></textarea> </div>
 							</fieldset>
 						</div>
 						<div class="section sectionfull spell-short-container threefold-selected">
 							<div class="section-name">
-								<div class="col repeatingcol spell-short-name"><span data-i18n="arcana/psychic-u">ARCANA/PSYCHIC</span></div>
+								<div class="col repeatingcol spell-short-name"><span
+										data-i18n="arcana/psychic-u">ARCANA/PSYCHIC</span></div>
 								<div class="col repeatingcol spell-short-description">
 									<span data-i18n="short-description-u">SHORT DESCRIPTION</span>
 								</div>
@@ -1385,13 +1509,19 @@
 								<input type="hidden" name="attr_spell-tn">
 								<input type="hidden" name="attr_spell-fatigue">
 								<input type="hidden" name="attr_spell-mp-cost">
-								<input type="checkbox" class="hiddencheckbox spell-method-uses-fatigue" name="attr_spell-method" value="fatigue">
-								<input type="checkbox" class="hiddencheckbox spell-method-uses-points" name="attr_spell-method" value="points">
+								<input type="checkbox" class="hiddencheckbox spell-method-uses-fatigue"
+									name="attr_spell-method" value="fatigue">
+								<input type="checkbox" class="hiddencheckbox spell-method-uses-points"
+									name="attr_spell-method" value="points">
 								<div class="col repeatingcol spell-short-name">
-									<button class="spell-magic-buttons spell-uses-fatigue" name="act_alternate-spell-check" type="action"><span name="attr_spell-name"></span></button>
-									<button class="spell-magic-buttons spell-uses-points" name="act_main-spell-check" type="action"><span name="attr_spell-name"></span></button>
+									<button class="spell-magic-buttons spell-uses-fatigue"
+										name="act_alternate-spell-check" type="action"><span
+											name="attr_spell-name"></span></button>
+									<button class="spell-magic-buttons spell-uses-points" name="act_main-spell-check"
+										type="action"><span name="attr_spell-name"></span></button>
 								</div>
-								<div class="col repeatingcol spell-short-description"><textarea name="attr_short-spell-description"></textarea></div>
+								<div class="col repeatingcol spell-short-description"><textarea
+										name="attr_short-spell-description"></textarea></div>
 							</fieldset>
 						</div>
 						<div class="section sectionfull spell-short-container cthulhu-awakens-selected">
@@ -1410,7 +1540,8 @@
 								<input type="hidden" name="attr_spell-tn">
 								<input type="hidden" name="attr_spell-fatigue">
 								<div class="col repeatingcol spell-short-name">
-									<button class="spell-magic-buttons" name="act_alternate-spell-check" type="action"><span name="attr_spell-name"></span></button>
+									<button class="spell-magic-buttons" name="act_alternate-spell-check"
+										type="action"><span name="attr_spell-name"></span></button>
 								</div>
 								<div class="col repeatingcol spell-short-description">
 									<textarea name="attr_short-spell-description"></textarea>
@@ -1447,17 +1578,22 @@
 						<div class="legacy-money-section">
 							<div>
 								<div class="money-score">
-									<input type="number" data-i18n-placeholder="cp-u" data-i18n-title="cp-u" name="attr_cp" placeholder="CP" data-i18n="cp-u" title="CP">
+									<input type="number" data-i18n-placeholder="cp-u" data-i18n-title="cp-u"
+										name="attr_cp" placeholder="CP" data-i18n="cp-u" title="CP">
 								</div>
 								<div class="money-score">
-									<input type="number" name="attr_sp" data-i18n-placeholder="sp-u" data-i18n-title="sp-u" placeholder="SP" data-i18n="sp-u" title="SP">
+									<input type="number" name="attr_sp" data-i18n-placeholder="sp-u"
+										data-i18n-title="sp-u" placeholder="SP" data-i18n="sp-u" title="SP">
 								</div>
 								<div class="money-score">
-									<input type="number" name="attr_gp" data-i18n-placeholder="gp-u" data-i18n-title="gp-u" placeholder="GP" data-i18n="gp-u" title="GP">
+									<input type="number" name="attr_gp" data-i18n-placeholder="gp-u"
+										data-i18n-title="gp-u" placeholder="GP" data-i18n="gp-u" title="GP">
 								</div>
 							</div>
 							<div class="section-name">
-								<button type="action" class="legacy-money-import-button" title="You have gold, silver, and copper from the original money system. Click this to import your coins into the new currency system" name="act_legacymoneyimport">
+								<button type="action" class="legacy-money-import-button"
+									title="You have gold, silver, and copper from the original money system. Click this to import your coins into the new currency system"
+									name="act_legacymoneyimport">
 									<span data-i18n="import-to-currency-u">IMPORT TO CURRENCY</span>
 								</button>
 							</div>
@@ -1522,10 +1658,12 @@
 						<span data-i18n="honorifics-titles-and-memberships-u">HONORIFICS, TITLES AND MEMBERSHIPS</span>
 					</div>
 					<div class="section-name persona-section-name personaunlocked">
-						<input type="text" name="attr_honorifics_titles_and_memberships_title" value="HONORIFICS, TITLES AND MEMBERSHIPS?">
+						<input type="text" name="attr_honorifics_titles_and_memberships_title"
+							value="HONORIFICS, TITLES AND MEMBERSHIPS?">
 					</div>
 					<div class="textbox">
-						<textarea name="attr_honorifics_titles_and_memberships" style="min-height: 250px; height: 250px;"></textarea>
+						<textarea name="attr_honorifics_titles_and_memberships"
+							style="min-height: 250px; height: 250px;"></textarea>
 					</div>
 				</div>
 			</div>
@@ -1581,7 +1719,8 @@
 			<div class="power-container">
 				<fieldset class="repeating_power">
 					<div class="section-name power-section-name">
-						<input type="text" data-i18n-placeholder="ancestry_class_power_name" placeholder="Ancestry or Class Power name" name="attr_powername">
+						<input type="text" data-i18n-placeholder="ancestry_class_power_name"
+							placeholder="Ancestry or Class Power name" name="attr_powername">
 					</div>
 					<div class="power-stats">
 						<div class="row row-power-type-source">
@@ -1614,16 +1753,19 @@
 			<div class="talent-container">
 				<fieldset class="repeating_talent">
 					<div class="section-name talent-section-name">
-						<input type="text" data-i18n-placeholder="talent_spec_name" placeholder="Talent or Specialization name" name="attr_powername">
+						<input type="text" data-i18n-placeholder="talent_spec_name"
+							placeholder="Talent or Specialization name" name="attr_powername">
 					</div>
 					<div class="talent-stats">
 						<input type="hidden" class="degree-select" name="attr_talentdegree" value="1">
-						<input type="checkbox" class="hiddencheckbox degreecheckbox" name="attr_aftermasterycheckbox" unchecked>
+						<input type="checkbox" class="hiddencheckbox degreecheckbox" name="attr_aftermasterycheckbox"
+							unchecked>
 						<div class="row row-talent-degree-source">
 							<div class="col col1">
 								<div class="old-age-selected blue-rose-selected">
 									<span data-i18n="specialization1-degree-u">DEGREE</span><span>: </span>
-									<select class="degree-select" name="attr_talentdegree" title="How far have you progressed in this Talent or Specialization?">
+									<select class="degree-select" name="attr_talentdegree"
+										title="How far have you progressed in this Talent or Specialization?">
 										<option value="1" data-i18n="novice-u">NOVICE</option>
 										<option value="2" data-i18n="journeyman-u">JOURNEYMAN</option>
 										<option value="3" data-i18n="master-u">MASTER</option>
@@ -1631,7 +1773,8 @@
 								</div>
 								<div class="fantasy-age-core-selected the-expanse-selected">
 									<span data-i18n="specialization1-degree-u">DEGREE</span><span>: </span>
-									<select class="degree-select" name="attr_talentdegree" title="How far have you progressed in this Talent or Specialization?">
+									<select class="degree-select" name="attr_talentdegree"
+										title="How far have you progressed in this Talent or Specialization?">
 										<option value="1" data-i18n="novice-u">NOVICE</option>
 										<option value="2" data-i18n="expert-u">EXPERT</option>
 										<option value="3" data-i18n="master-u">MASTER</option>
@@ -1639,12 +1782,14 @@
 								</div>
 								<div class="mod-selected">
 									<span data-i18n="specialization1-degree-u">DEGREE</span><span>: </span>
-									<select class="degree-select justthree" name="attr_talentdegree" title="How far have you progressed in this Talent or Specialization?">
+									<select class="degree-select justthree" name="attr_talentdegree"
+										title="How far have you progressed in this Talent or Specialization?">
 										<option value="1" data-i18n="novice-u">NOVICE</option>
 										<option value="2" data-i18n="expert-u">EXPERT</option>
 										<option value="3" data-i18n="master-u">MASTER</option>
 									</select>
-									<select class="degree-select aftermastery" name="attr_talentdegree" title="How far have you progressed in this Talent or Specialization?">
+									<select class="degree-select aftermastery" name="attr_talentdegree"
+										title="How far have you progressed in this Talent or Specialization?">
 										<option value="1" data-i18n="novice-u">NOVICE</option>
 										<option value="2" data-i18n="expert-u">EXPERT</option>
 										<option value="3" data-i18n="master-u">MASTER</option>
@@ -1652,7 +1797,8 @@
 										<option value="5" data-i18n="apex-u">APEX</option>
 									</select>
 									<span>+2</span>
-									<input type="checkbox" class="degreecheckbox" name="attr_aftermasterycheckbox" unchecked>
+									<input type="checkbox" class="degreecheckbox" name="attr_aftermasterycheckbox"
+										unchecked>
 								</div>
 							</div>
 							<div class="col col1">
@@ -1670,8 +1816,10 @@
 								<textarea name="attr_talent1description"></textarea>
 							</div>
 							<div class="col sectiononethird">
-								<div class="degree2 old-age-selected blue-rose-selected"><span data-i18n="journeyman-u">JOURNEYMAN</span><span>:</span></div>
-								<div class="degree2 fantasy-age-core-selected mod-selected the-expanse-selected"><span data-i18n="expert-u">EXPERT</span><span>:</span></div>
+								<div class="degree2 old-age-selected blue-rose-selected"><span
+										data-i18n="journeyman-u">JOURNEYMAN</span><span>:</span></div>
+								<div class="degree2 fantasy-age-core-selected mod-selected the-expanse-selected"><span
+										data-i18n="expert-u">EXPERT</span><span>:</span></div>
 								<textarea class="degree2" name="attr_talent2description"></textarea>
 							</div>
 							<div class="col sectiononethird">
@@ -1680,7 +1828,8 @@
 							</div>
 							<div class="aftermastery">
 								<div class="col sectiononethird">
-									<span class="degree4" data-i18n="grandmaster-u">GRANDMASTER</span><span class="degree4">:</span>
+									<span class="degree4" data-i18n="grandmaster-u">GRANDMASTER</span><span
+										class="degree4">:</span>
 									<textarea class="degree4" name="attr_talent4description"></textarea>
 								</div>
 								<div class="col sectiononethird">
@@ -1708,11 +1857,13 @@
 							<div class="row">
 								<span data-i18n="focus:-u">FOCUS:</span>
 								<input type="text" title="Focus name" name="attr_focusname">
-								<input type="number" data-i18n-title="focus_bonus_title" title="Focus bonus (0, 2, 3, etc.)" name="attr_focusbonus" value="2">
+								<input type="number" data-i18n-title="focus_bonus_title"
+									title="Focus bonus (0, 2, 3, etc.)" name="attr_focusbonus" value="2">
 								<button class="focus-buttons" name="act_focus-check" type="action"></button>
 							</div>
 							<div class="row">
-								<textarea name="attr_focusdescription" data-i18n-placeholder="description" placeholder="Description" title="Description"></textarea>
+								<textarea name="attr_focusdescription" data-i18n-placeholder="description"
+									placeholder="Description" title="Description"></textarea>
 							</div>
 						</fieldset>
 					</div>
@@ -1726,11 +1877,13 @@
 							<div class="row">
 								<span data-i18n="focus:-u">FOCUS:</span>
 								<input type="text" title="Focus name" name="attr_focusname">
-								<input type="number" data-i18n-title="focus_bonus_title" title="Focus bonus (0, 2, 3, etc.)" value="2" name="attr_focusbonus">
+								<input type="number" data-i18n-title="focus_bonus_title"
+									title="Focus bonus (0, 2, 3, etc.)" value="2" name="attr_focusbonus">
 								<button class="focus-buttons" name="act_focus-check" type="action"></button>
 							</div>
 							<div class="row">
-								<textarea name="attr_focusdescription" data-i18n-placeholder="description" placeholder="Description" title="Description"></textarea>
+								<textarea name="attr_focusdescription" data-i18n-placeholder="description"
+									placeholder="Description" title="Description"></textarea>
 							</div>
 						</fieldset>
 					</div>
@@ -1744,11 +1897,13 @@
 							<div class="row">
 								<span data-i18n="focus:-u">FOCUS:</span>
 								<input type="text" title="Focus name" name="attr_focusname">
-								<input type="number" data-i18n-title="focus_bonus_title" title="Focus bonus (0, 2, 3, etc.)" value="2" name="attr_focusbonus">
+								<input type="number" data-i18n-title="focus_bonus_title"
+									title="Focus bonus (0, 2, 3, etc.)" value="2" name="attr_focusbonus">
 								<button class="focus-buttons" name="act_focus-check" type="action"></button>
 							</div>
 							<div class="row">
-								<textarea name="attr_focusdescription" data-i18n-placeholder="description" placeholder="Description" title="Description"></textarea>
+								<textarea name="attr_focusdescription" data-i18n-placeholder="description"
+									placeholder="Description" title="Description"></textarea>
 							</div>
 						</fieldset>
 					</div>
@@ -1762,11 +1917,13 @@
 							<div class="row">
 								<span data-i18n="focus:-u">FOCUS:</span>
 								<input type="text" title="Focus name" name="attr_focusname">
-								<input type="number" data-i18n-title="focus_bonus_title" title="Focus bonus (0, 2, 3, etc.)" value="2" name="attr_focusbonus">
+								<input type="number" data-i18n-title="focus_bonus_title"
+									title="Focus bonus (0, 2, 3, etc.)" value="2" name="attr_focusbonus">
 								<button class="focus-buttons" name="act_focus-check" type="action"></button>
 							</div>
 							<div class="row">
-								<textarea name="attr_focusdescription" data-i18n-placeholder="description" placeholder="Description" title="Description"></textarea>
+								<textarea name="attr_focusdescription" data-i18n-placeholder="description"
+									placeholder="Description" title="Description"></textarea>
 							</div>
 						</fieldset>
 					</div>
@@ -1779,8 +1936,10 @@
 					</div>
 					<div class="focus-container">
 						<div class="initiative-focus">
-							<span data-i18n="focus:-u">FOCUS:</span>  <span class="focusnamespan" data-i18n="initiative">Initiative</span>
-							<input type="number" data-i18n-title="initiative_adjustment" value="0" name="attr_init-bonus">
+							<span data-i18n="focus:-u">FOCUS:</span> <span class="focusnamespan"
+								data-i18n="initiative">Initiative</span>
+							<input type="number" data-i18n-title="initiative_adjustment" value="0"
+								name="attr_init-bonus">
 							<button class="focus-buttons" name="act_initiative_check" type="action"></button>
 							<span data-i18n="initiative_description"></span>
 						</div>
@@ -1788,11 +1947,13 @@
 							<div class="row">
 								<span data-i18n="focus:-u">FOCUS:</span>
 								<input type="text" title="Focus name" name="attr_focusname">
-								<input type="number" data-i18n-title="focus_bonus_title" title="Focus bonus (0, 2, 3, etc.)" value="2" name="attr_focusbonus">
+								<input type="number" data-i18n-title="focus_bonus_title"
+									title="Focus bonus (0, 2, 3, etc.)" value="2" name="attr_focusbonus">
 								<button class="focus-buttons" name="act_focus-check" type="action"></button>
 							</div>
 							<div class="row">
-								<textarea name="attr_focusdescription" data-i18n-placeholder="description" placeholder="Description" title="Description"></textarea>
+								<textarea name="attr_focusdescription" data-i18n-placeholder="description"
+									placeholder="Description" title="Description"></textarea>
 							</div>
 						</fieldset>
 					</div>
@@ -1806,11 +1967,13 @@
 							<div class="row">
 								<span data-i18n="focus:-u">FOCUS:</span>
 								<input type="text" title="Focus name" name="attr_focusname">
-								<input type="number" data-i18n-title="focus_bonus_title" title="Focus bonus (0, 2, 3, etc.)" value="2" name="attr_focusbonus">
+								<input type="number" data-i18n-title="focus_bonus_title"
+									title="Focus bonus (0, 2, 3, etc.)" value="2" name="attr_focusbonus">
 								<button class="focus-buttons" name="act_focus-check" type="action"></button>
 							</div>
 							<div class="row">
-								<textarea name="attr_focusdescription" data-i18n-placeholder="description" placeholder="Description" title="Description"></textarea>
+								<textarea name="attr_focusdescription" data-i18n-placeholder="description"
+									placeholder="Description" title="Description"></textarea>
 							</div>
 						</fieldset>
 					</div>
@@ -1824,11 +1987,13 @@
 							<div class="row">
 								<span data-i18n="focus:-u">FOCUS:</span>
 								<input type="text" title="Focus name" name="attr_focusname">
-								<input type="number" data-i18n-title="focus_bonus_title" title="Focus bonus (0, 2, 3, etc.)" value="2" name="attr_focusbonus">
+								<input type="number" data-i18n-title="focus_bonus_title"
+									title="Focus bonus (0, 2, 3, etc.)" value="2" name="attr_focusbonus">
 								<button class="focus-buttons" name="act_focus-check" type="action"></button>
 							</div>
 							<div class="row">
-								<textarea name="attr_focusdescription" data-i18n-placeholder="description" placeholder="Description" title="Description"></textarea>
+								<textarea name="attr_focusdescription" data-i18n-placeholder="description"
+									placeholder="Description" title="Description"></textarea>
 							</div>
 						</fieldset>
 					</div>
@@ -1842,11 +2007,13 @@
 							<div class="row">
 								<span data-i18n="focus:-u">FOCUS:</span>
 								<input type="text" title="Focus name" name="attr_focusname">
-								<input type="number" data-i18n-title="focus_bonus_title" title="Focus bonus (0, 2, 3, etc.)" value="2" name="attr_focusbonus">
+								<input type="number" data-i18n-title="focus_bonus_title"
+									title="Focus bonus (0, 2, 3, etc.)" value="2" name="attr_focusbonus">
 								<button class="focus-buttons" name="act_focus-check" type="action"></button>
 							</div>
 							<div class="row">
-								<textarea name="attr_focusdescription" data-i18n-placeholder="description" placeholder="Description" title="Description"></textarea>
+								<textarea name="attr_focusdescription" data-i18n-placeholder="description"
+									placeholder="Description" title="Description"></textarea>
 							</div>
 						</fieldset>
 					</div>
@@ -1860,11 +2027,13 @@
 							<div class="row">
 								<span data-i18n="focus:-u">FOCUS:</span>
 								<input type="text" title="Focus name" name="attr_focusname">
-								<input type="number" data-i18n-title="focus_bonus_title" title="Focus bonus (0, 2, 3, etc.)" value="2" name="attr_focusbonus">
+								<input type="number" data-i18n-title="focus_bonus_title"
+									title="Focus bonus (0, 2, 3, etc.)" value="2" name="attr_focusbonus">
 								<button class="focus-buttons" name="act_focus-check" type="action"></button>
 							</div>
 							<div class="row">
-								<textarea name="attr_focusdescription" data-i18n-placeholder="description" placeholder="Description" title="Description"></textarea>
+								<textarea name="attr_focusdescription" data-i18n-placeholder="description"
+									placeholder="Description" title="Description"></textarea>
 							</div>
 						</fieldset>
 					</div>
@@ -1880,11 +2049,13 @@
 							<div class="row">
 								<span data-i18n="focus:-u">FOCUS:</span>
 								<input type="text" title="Focus name" name="attr_focusname">
-								<input type="number" data-i18n-title="focus_bonus_title" title="Focus bonus (0, 2, 3, etc.)" value="2" name="attr_focusbonus">
+								<input type="number" data-i18n-title="focus_bonus_title"
+									title="Focus bonus (0, 2, 3, etc.)" value="2" name="attr_focusbonus">
 								<button class="focus-buttons" name="act_focus-check" type="action"></button>
 							</div>
 							<div class="row">
-								<textarea name="attr_focusdescription" data-i18n-placeholder="description" placeholder="Description" title="Description"></textarea>
+								<textarea name="attr_focusdescription" data-i18n-placeholder="description"
+									placeholder="Description" title="Description"></textarea>
 							</div>
 						</fieldset>
 					</div>
@@ -1898,11 +2069,13 @@
 							<div class="row">
 								<span data-i18n="focus:-u">FOCUS:</span>
 								<input type="text" title="Focus name" name="attr_focusname">
-								<input type="number" data-i18n-title="focus_bonus_title" title="Focus bonus (0, 2, 3, etc.)" value="2" name="attr_focusbonus">
+								<input type="number" data-i18n-title="focus_bonus_title"
+									title="Focus bonus (0, 2, 3, etc.)" value="2" name="attr_focusbonus">
 								<button class="focus-buttons" name="act_focus-check" type="action"></button>
 							</div>
 							<div class="row">
-								<textarea name="attr_focusdescription" data-i18n-placeholder="description" placeholder="Description" title="Description"></textarea>
+								<textarea name="attr_focusdescription" data-i18n-placeholder="description"
+									placeholder="Description" title="Description"></textarea>
 							</div>
 						</fieldset>
 					</div>
@@ -1916,11 +2089,13 @@
 							<div class="row">
 								<span data-i18n="focus:-u">FOCUS:</span>
 								<input type="text" title="Focus name" name="attr_focusname">
-								<input type="number" data-i18n-title="focus_bonus_title" title="Focus bonus (0, 2, 3, etc.)" value="2" name="attr_focusbonus">
+								<input type="number" data-i18n-title="focus_bonus_title"
+									title="Focus bonus (0, 2, 3, etc.)" value="2" name="attr_focusbonus">
 								<button class="focus-buttons" name="act_focus-check" type="action"></button>
 							</div>
 							<div class="row">
-								<textarea name="attr_focusdescription" data-i18n-placeholder="description" placeholder="Description" title="Description"></textarea>
+								<textarea name="attr_focusdescription" data-i18n-placeholder="description"
+									placeholder="Description" title="Description"></textarea>
 							</div>
 						</fieldset>
 					</div>
@@ -2006,7 +2181,8 @@
 									<input type="number" value="0" name="attr_spell-focus-bonus">
 								</div>
 								<div class="row">
-									<button class="spell-magic-buttons" name="act_main-spell-check" type="action"></button>
+									<button class="spell-magic-buttons" name="act_main-spell-check"
+										type="action"></button>
 								</div>
 							</div>
 						</div>
@@ -2097,7 +2273,8 @@
 									<input type="number" value="0" name="attr_spell-focus-bonus">
 								</div>
 								<div class="row">
-									<button class="spell-magic-buttons" name="act_main-spell-check" type="action"></button>
+									<button class="spell-magic-buttons" name="act_main-spell-check"
+										type="action"></button>
 								</div>
 							</div>
 						</div>
@@ -2166,7 +2343,8 @@
 								<div class="row">
 									<span class="spell-uses-fatigue">
 										<input type="text" name="attr_spell-fatigue">
-										<button class="spell-magic-buttons" name="act_fatigue-check" type="action"></button>
+										<button class="spell-magic-buttons" name="act_fatigue-check"
+											type="action"></button>
 									</span>
 								</div>
 							</div>
@@ -2196,7 +2374,8 @@
 									<input type="number" value="0" name="attr_spell-focus-bonus">
 								</div>
 								<div class="row">
-									<button class="spell-magic-buttons" name="act_alternate-spell-check" type="action"></button>
+									<button class="spell-magic-buttons" name="act_alternate-spell-check"
+										type="action"></button>
 								</div>
 							</div>
 						</div>
@@ -2265,7 +2444,8 @@
 								<div class="row">
 									<span class="spell-uses-fatigue">
 										<input type="text" name="attr_spell-fatigue">
-										<button class="spell-magic-buttons" name="act_fatigue-check" type="action"></button>
+										<button class="spell-magic-buttons" name="act_fatigue-check"
+											type="action"></button>
 									</span>
 								</div>
 							</div>
@@ -2290,7 +2470,8 @@
 									<input type="number" value="0" name="attr_spell-focus-bonus">
 								</div>
 								<div class="row">
-									<button class="spell-magic-buttons" name="act_alternate-spell-check" type="action"></button>
+									<button class="spell-magic-buttons" name="act_alternate-spell-check"
+										type="action"></button>
 								</div>
 							</div>
 						</div>
@@ -2309,8 +2490,10 @@
 			</div>
 			<div class="spell-container modern-age-selected">
 				<fieldset class="repeating_spell">
-					<input type="checkbox" value="points" name="attr_spell-method" class="hiddencheckbox spell-method-uses-points">
-					<input type="checkbox" value="fatigue" name="attr_spell-method" class="hiddencheckbox spell-method-uses-fatigue">
+					<input type="checkbox" value="points" name="attr_spell-method"
+						class="hiddencheckbox spell-method-uses-points">
+					<input type="checkbox" value="fatigue" name="attr_spell-method"
+						class="hiddencheckbox spell-method-uses-fatigue">
 					<div class="section-name spell-section-name">
 						<input type="text" placeholder="Name" name="attr_spell-name">
 						<select class="spell-method" name="attr_spell-method">
@@ -2366,7 +2549,8 @@
 								<div class="row">
 									<span class="spell-uses-fatigue">
 										<input type="text" name="attr_spell-fatigue">
-										<button class="spell-magic-buttons" name="act_fatigue-check" type="action"></button>
+										<button class="spell-magic-buttons" name="act_fatigue-check"
+											type="action"></button>
 									</span>
 									<span class="spell-uses-points">
 										<input type="text" name="attr_spell-mp-cost">
@@ -2390,7 +2574,8 @@
 								<div class="row">
 									<select class="spell-ability" name="attr_spell-ability">
 										<option value="accuracy" data-i18n="accuracy">Accuracy</option>
-										<option checked=true value="communication" data-i18n="communication">Communication</option>
+										<option checked=true value="communication" data-i18n="communication">
+											Communication</option>
 										<option value="constitution" data-i18n="constitution">Constitution</option>
 										<option value="dexterity" data-i18n="dexterity">Dexterity</option>
 										<option value="fighting" data-i18n="fighting">Fighting</option>
@@ -2405,27 +2590,34 @@
 								</div>
 								<div class="row">
 									<span class="spell-uses-fatigue">
-										<button class="spell-magic-buttons" name="act_alternate-spell-check" type="action"></button>
+										<button class="spell-magic-buttons" name="act_alternate-spell-check"
+											type="action"></button>
 									</span>
 									<span class="spell-uses-points">
-										<button class="spell-magic-buttons" name="act_main-spell-check" type="action"></button>
+										<button class="spell-magic-buttons" name="act_main-spell-check"
+											type="action"></button>
 									</span>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="spell-descriptions">
-						<div class="row row-short-spell-description"> <span data-i18n="short-desc.:-u">SHORT DESC.:</span> <textarea name="attr_short-spell-description"></textarea>
+						<div class="row row-short-spell-description"> <span data-i18n="short-desc.:-u">SHORT
+								DESC.:</span> <textarea name="attr_short-spell-description"></textarea>
 						</div>
-						<div class="row row-full-spell-description"> <span data-i18n="description:-u">DESCRIPTION:</span> <textarea name="attr_full-spell-description"></textarea>
+						<div class="row row-full-spell-description"> <span
+								data-i18n="description:-u">DESCRIPTION:</span> <textarea
+								name="attr_full-spell-description"></textarea>
 						</div>
 					</div>
 				</fieldset>
 			</div>
 			<div class="spell-container threefold-selected">
 				<fieldset class="repeating_spell">
-					<input type="checkbox" value="points" name="attr_spell-method" class="hiddencheckbox spell-method-uses-points">
-					<input type="checkbox" value="fatigue" name="attr_spell-method" class="hiddencheckbox spell-method-uses-fatigue">
+					<input type="checkbox" value="points" name="attr_spell-method"
+						class="hiddencheckbox spell-method-uses-points">
+					<input type="checkbox" value="fatigue" name="attr_spell-method"
+						class="hiddencheckbox spell-method-uses-fatigue">
 					<div class="section-name spell-section-name">
 						<input type="text" placeholder="Name" name="attr_spell-name">
 						<select class="spell-method" name="attr_spell-method">
@@ -2481,9 +2673,11 @@
 								<div class="row">
 									<span class="spell-uses-fatigue">
 										<input type="text" name="attr_spell-fatigue">
-										<button class="spell-magic-buttons" name="act_fatigue-check" type="action"></button>
+										<button class="spell-magic-buttons" name="act_fatigue-check"
+											type="action"></button>
 									</span>
-									<span class="spell-uses-points"> <input type="text" name="attr_spell-mp-cost"> </span>
+									<span class="spell-uses-points"> <input type="text" name="attr_spell-mp-cost">
+									</span>
 								</div>
 							</div>
 						</div>
@@ -2504,7 +2698,8 @@
 								<div class="row">
 									<select class="spell-ability" name="attr_spell-ability">
 										<option value="accuracy" data-i18n="accuracy">Accuracy</option>
-										<option checked=true value="communication" data-i18n="communication">Communication</option>
+										<option checked=true value="communication" data-i18n="communication">
+											Communication</option>
 										<option value="constitution" data-i18n="constitution">Constitution</option>
 										<option value="dexterity" data-i18n="dexterity">Dexterity</option>
 										<option value="fighting" data-i18n="fighting">Fighting</option>
@@ -2519,25 +2714,31 @@
 								</div>
 								<div class="row">
 									<div class="spell-uses-fatigue">
-										<button class="spell-magic-buttons" name="act_alternate-spell-check" type="action"></button>
+										<button class="spell-magic-buttons" name="act_alternate-spell-check"
+											type="action"></button>
 									</div>
 									<div class="spell-uses-points">
-										<button class="spell-magic-buttons" name="act_main-spell-check" type="action"></button>
+										<button class="spell-magic-buttons" name="act_main-spell-check"
+											type="action"></button>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="spell-descriptions">
-						<div class="row row-short-spell-description"> <span data-i18n="short-desc.:-u">SHORT DESC.:</span> <textarea name="attr_short-spell-description"></textarea>
+						<div class="row row-short-spell-description"> <span data-i18n="short-desc.:-u">SHORT
+								DESC.:</span> <textarea name="attr_short-spell-description"></textarea>
 						</div>
-						<div class="row row-full-spell-description"> <span data-i18n="description:-u">DESCRIPTION:</span> <textarea name="attr_full-spell-description"></textarea>
+						<div class="row row-full-spell-description"> <span
+								data-i18n="description:-u">DESCRIPTION:</span> <textarea
+								name="attr_full-spell-description"></textarea>
 						</div>
 					</div>
 				</fieldset>
 			</div>
 			<div class="the-expanse-selected">
-				<span data-i18n="the-expanse-rpg-does-not-support-magical-powers"><i>The Expanse RPG</i> does not support magical powers.</span>
+				<span data-i18n="the-expanse-rpg-does-not-support-magical-powers"><i>The Expanse RPG</i> does not
+					support magical powers.</span>
 			</div>
 			<div class="world-of-lazarus-selected">
 				<span><i>The World of Lazarus RPG</i> does not support magical powers.</span>
@@ -2555,34 +2756,54 @@
 						<span data-i18n="game-system-u">GAME SYSTEM</span>
 					</div>
 					<div class="gameunlocked">
-						<select class="game-select" name="attr_game" title="This determines the stats displayed on the sheet and the system logo.">
+						<select class="game-select" name="attr_game"
+							title="This determines the stats displayed on the sheet and the system logo.">
 							<option value="dragon-age" title="Dragon Age RPG" data-i18n="dragon-age">Dragon Age</option>
-							<option value="fantasy-age" title="Fantasy AGE RPG" data-i18n="fantasy-age-basic">Fantasy AGE Basic</option>
-							<option value="fantasy-age-core" title="Fantasy AGE RPG" data-i18n="fantasy-age-core">Fantasy AGE Core</option>
-							<option value="titansgrave" title="Titansgrave, a Fantasy AGE setting" data-i18n="titansgrave">Titansgrave</option>
+							<option value="fantasy-age" title="Fantasy AGE RPG" data-i18n="fantasy-age-basic">Fantasy
+								AGE Basic</option>
+							<option value="fantasy-age-core" title="Fantasy AGE RPG" data-i18n="fantasy-age-core">
+								Fantasy AGE Core</option>
+							<option value="titansgrave" title="Titansgrave, a Fantasy AGE setting"
+								data-i18n="titansgrave">Titansgrave</option>
 							<option value="blue-rose" title="The Blue Rose RPG" data-i18n="blue-rose">Blue Rose</option>
-							<option value="the-expanse" title="The Expanse RPG" data-i18n="the-expanse">The Expanse</option>
-							<option value="modern-age" title="The Modern AGE RPG" data-i18n="modern-age">Modern AGE</option>
-							<option value="threefold" title="Threefold, a Modern AGE setting" data-i18n="threefold">Threefold</option>
-							<option value="world-of-lazarus" title="World of Lazarus, a Modern AGE setting" data-i18n="world-of-lazarus">World of Lazarus</option>
-							<option value="fifth-season" title="Fifth Season RPG" data-i18n="fifth-season">Fifth Season</option>
-							<option value="cthulhu-awakens" title="Cthulhu Awakens RPG" data-i18n="cthulhu-awakens">Cthulhu Awakens</option>
+							<option value="the-expanse" title="The Expanse RPG" data-i18n="the-expanse">The Expanse
+							</option>
+							<option value="modern-age" title="The Modern AGE RPG" data-i18n="modern-age">Modern AGE
+							</option>
+							<option value="threefold" title="Threefold, a Modern AGE setting" data-i18n="threefold">
+								Threefold</option>
+							<option value="world-of-lazarus" title="World of Lazarus, a Modern AGE setting"
+								data-i18n="world-of-lazarus">World of Lazarus</option>
+							<option value="fifth-season" title="Fifth Season RPG" data-i18n="fifth-season">Fifth Season
+							</option>
+							<option value="cthulhu-awakens" title="Cthulhu Awakens RPG" data-i18n="cthulhu-awakens">
+								Cthulhu Awakens</option>
 						</select>
 					</div>
 					<div class="gamelocked">
-						<select class="the-expanse-selected" name="attr_game" title="This determines the stats displayed on the sheet and the system logo.">
-							<option value="the-expanse" title="The Expanse RPG" data-i18n="the-expanse">The Expanse</option>
+						<select class="the-expanse-selected" name="attr_game"
+							title="This determines the stats displayed on the sheet and the system logo.">
+							<option value="the-expanse" title="The Expanse RPG" data-i18n="the-expanse">The Expanse
+							</option>
 						</select>
-						<select class="fantasy-age-selected fantasy-age-core-selected blue-rose-selected" name="attr_game" title="This determines the stats displayed on the sheet and the system logo.">
-							<option value="fantasy-age" title="Fantasy AGE RPG" data-i18n="fantasy-age-basic">Fantasy AGE Basic</option>
-							<option value="fantasy-age-core" title="Fantasy AGE RPG" data-i18n="fantasy-age-core">Fantasy AGE Core</option>
+						<select class="fantasy-age-selected fantasy-age-core-selected blue-rose-selected"
+							name="attr_game"
+							title="This determines the stats displayed on the sheet and the system logo.">
+							<option value="fantasy-age" title="Fantasy AGE RPG" data-i18n="fantasy-age-basic">Fantasy
+								AGE Basic</option>
+							<option value="fantasy-age-core" title="Fantasy AGE RPG" data-i18n="fantasy-age-core">
+								Fantasy AGE Core</option>
 							<option value="blue-rose" title="The Blue Rose RPG" data-i18n="blue-rose">Blue Rose</option>
 						</select>
-						<select class="fifth-season-selected" name="attr_game" title="This determines the stats displayed on the sheet and the system logo.">
-							<option value="fifth-season" title="Fifth Season RPG" data-i18n="fifth-season">Fifth Season</option>
+						<select class="fifth-season-selected" name="attr_game"
+							title="This determines the stats displayed on the sheet and the system logo.">
+							<option value="fifth-season" title="Fifth Season RPG" data-i18n="fifth-season">Fifth Season
+							</option>
 						</select>
-						<select class="cthulhu-awakens-selected" name="attr_game" title="This determines the stats displayed on the sheet and the system logo.">
-							<option value="cthulhu-awakens" title="Cthulhu Awakens RPG" data-i18n="cthulhu-awakens">Cthulhu Awakens</option>
+						<select class="cthulhu-awakens-selected" name="attr_game"
+							title="This determines the stats displayed on the sheet and the system logo.">
+							<option value="cthulhu-awakens" title="Cthulhu Awakens RPG" data-i18n="cthulhu-awakens">
+								Cthulhu Awakens</option>
 						</select>
 					</div>
 				</div>
@@ -2593,7 +2814,7 @@
 					</div>
 					<div>
 						<select class="color-select" name="attr_color">
-						<optgroup class="color-select-original" label="Classic Colors">
+							<optgroup class="color-select-original" label="Classic Colors">
 								<option value="black" data-i18n="black">Black</option>
 								<option value="blue1" data-i18n="blue-1">Blue 1</option>
 								<option value="blue2" data-i18n="blue-2">Blue 2</option>
@@ -2621,7 +2842,8 @@
 					<!-- Should the character name be included every time it rolls? -->
 					<div class="row">
 						<div class="col select-text">
-							<span data-i18n="show-the-character-name-in-roll-results">Show the character name in roll results</span>
+							<span data-i18n="show-the-character-name-in-roll-results">Show the character name in roll
+								results</span>
 						</div>
 						<div class="col select-drop">
 							<select name="attr_char-name-option">
@@ -2639,7 +2861,8 @@
 							<select name="attr_wtype">
 								<option value="" data-i18n="never-whisper-roll">Never Whisper Rolls</option>
 								<option value="@{whisper-toggle}" data-i18n="toggle">Toggle</option>
-								<option value="?{@{whisper}?|@{public_roll},|@{whisper_roll},/w gm }" data-i18n="query-whisper-roll">Query Whisper</option>
+								<option value="?{@{whisper}?|@{public_roll},|@{whisper_roll},/w gm }"
+									data-i18n="query-whisper-roll">Query Whisper</option>
 								<option value="/w gm " data-i18n="always-whisper-roll">Always Whisper Rolls</option>
 							</select>
 						</div>
@@ -2660,7 +2883,8 @@
 							<select name="attr_aim-select">
 								<option value="0" data-i18n="never-use-aim">Never use Aim</option>
 								<option value="@{aim-toggle}" data-i18n="toggle">Toggle</option>
-								<option value="?{Using the Aim action|Yes, @{aim-value}|No, 0}" data-i18n="prompt-for-aim">Prompt for Aim</option>
+								<option value="?{Using the Aim action|Yes, @{aim-value}|No, 0}"
+									data-i18n="prompt-for-aim">Prompt for Aim</option>
 								<option value="@{aim-value}" data-i18n="always-use-aim">Always use Aim</option>
 							</select>
 						</div>
@@ -2674,7 +2898,8 @@
 							<select name="attr_stunts2-select">
 								<option value="0" data-i18n="never-reroll-stunt">Never Reroll Stunt Die</option>
 								<option value="@{stunts2-toggle}" data-i18n="toggle">Toggle</option>
-								<option value="?{Reroll Stunt Die|Yes, d6|No, 0}" data-i18n="prompt-for-stunt-reroll">Prompt for Stunt Reroll</option>
+								<option value="?{Reroll Stunt Die|Yes, d6|No, 0}" data-i18n="prompt-for-stunt-reroll">
+									Prompt for Stunt Reroll</option>
 								<option value="d6" data-i18n="always-reroll-stunt">Always Reroll Stunt Die</option>
 							</select>
 						</div>
@@ -2682,7 +2907,8 @@
 					<!-- Add a tiebreaker to Initiative -->
 					<div class="row">
 						<div class="col select-text">
-							<span data-i18n="add-tiebreaker-to-initiative-rolls">Add Tiebreaker to Initiative rolls</span>
+							<span data-i18n="add-tiebreaker-to-initiative-rolls">Add Tiebreaker to Initiative
+								rolls</span>
 						</div>
 						<div class="col select-drop">
 							<select name="attr_initiative-tiebreaker">
@@ -2694,7 +2920,8 @@
 					<!-- Should Armor Penalty apply to Dexterity Rolls? -->
 					<div class="row">
 						<div class="col select-text">
-							<span data-i18n="apply-armor-penalty-to-dexterity-rolls">Apply Armor Penalty to Dexterity rolls</span>
+							<span data-i18n="apply-armor-penalty-to-dexterity-rolls">Apply Armor Penalty to Dexterity
+								rolls</span>
 						</div>
 						<div class="col select-drop">
 							<select name="attr_armor-penalty-for-dex">
@@ -2717,7 +2944,8 @@
 							<span data-i18n="replace-health-with-fortune">Replace Health with Fortune</span>
 						</div>
 						<div class="col list-toggle-checkbox">
-							<input type="checkbox" value="1" class="list-checkbox" name="attr_health-fortune-toggle"><span></span>
+							<input type="checkbox" value="1" class="list-checkbox"
+								name="attr_health-fortune-toggle"><span></span>
 						</div>
 					</div>
 					<!-- Show/Hide INITIATIVE -->
@@ -2726,15 +2954,20 @@
 							<span data-i18n="show-the-initiative-focus">Show the Initiative focus</span>
 						</div>
 						<div class="col list-toggle-checkbox">
-							<input type="checkbox" value="1" class="list-checkbox" name="attr_initiative-toggle"><span></span>
+							<input type="checkbox" value="1" class="list-checkbox"
+								name="attr_initiative-toggle"><span></span>
 						</div>
 					</div>
 					<!-- Show/Hide MP/KANNA/PP -->
 					<div class="row list-toggle-container">
 						<div class="col list-toggle-text">
-							<span class="no-mod-selected" data-i18n="show-the-mana/magic-points-section">Show the Mana/Magic Points section</span>
-							<span class="modern-age-selected world-of-lazarus-selected cthulhu-awakens-selected fifth-season-selected" data-i18n="show-the-power-points-section">Show the Power Points section</span>
-							<span class="threefold-selected" data-i18n="show-the-kanna-section">Show the Kanna section</span>
+							<span class="no-mod-selected" data-i18n="show-the-mana/magic-points-section">Show the
+								Mana/Magic Points section</span>
+							<span
+								class="modern-age-selected world-of-lazarus-selected cthulhu-awakens-selected fifth-season-selected"
+								data-i18n="show-the-power-points-section">Show the Power Points section</span>
+							<span class="threefold-selected" data-i18n="show-the-kanna-section">Show the Kanna
+								section</span>
 						</div>
 						<div class="col list-toggle-checkbox">
 							<input type="checkbox" value="1" class="list-checkbox" name="attr_mana-toggle"><span></span>
@@ -2743,7 +2976,8 @@
 					<!-- Show/Hide XP -->
 					<div class="row list-toggle-container">
 						<div class="col list-toggle-text">
-							<span data-i18n="show-the-experience-points-section">Show the Experience Points section</span>
+							<span data-i18n="show-the-experience-points-section">Show the Experience Points
+								section</span>
 						</div>
 						<div class="col list-toggle-checkbox">
 							<input type="checkbox" value="1" class="list-checkbox" name="attr_exp-toggle"><span></span>
@@ -2755,7 +2989,8 @@
 							<span data-i18n="show-the-fatigue-section">Show the Fatigue section</span>
 						</div>
 						<div class="col list-toggle-checkbox">
-							<input type="checkbox" value="1" class="list-checkbox" name="attr_fatigue-toggle"><span></span>
+							<input type="checkbox" value="1" class="list-checkbox"
+								name="attr_fatigue-toggle"><span></span>
 						</div>
 					</div>
 					<!-- Show/Hide FEAR -->
@@ -2773,7 +3008,8 @@
 							<span data-i18n="show-the-horror-section">Show the Horror section</span>
 						</div>
 						<div class="col list-toggle-checkbox">
-							<input type="checkbox" value="1" class="list-checkbox" name="attr_horror-toggle"><span></span>
+							<input type="checkbox" value="1" class="list-checkbox"
+								name="attr_horror-toggle"><span></span>
 						</div>
 					</div>
 					<!-- Show/Hide CONVICTION -->
@@ -2782,7 +3018,8 @@
 							<span data-i18n="show-the-conviction-section">Show the Conviction section</span>
 						</div>
 						<div class="col list-toggle-checkbox">
-							<input type="checkbox" value="1" class="list-checkbox" name="attr_conviction-toggle"><span></span>
+							<input type="checkbox" value="1" class="list-checkbox"
+								name="attr_conviction-toggle"><span></span>
 						</div>
 					</div>
 					<!-- Show/Hide CORRUPTION -->
@@ -2791,7 +3028,8 @@
 							<span data-i18n="show-the-corruption-section">Show the Corruption section</span>
 						</div>
 						<div class="col list-toggle-checkbox">
-							<input type="checkbox" value="1" class="list-checkbox" name="attr_corruption-toggle"><span></span>
+							<input type="checkbox" value="1" class="list-checkbox"
+								name="attr_corruption-toggle"><span></span>
 						</div>
 					</div>
 					<!-- Show/Hide AMMO -->
@@ -2809,7 +3047,8 @@
 							<span data-i18n="show-the-class-list">Show the Class Power list in the Character tab</span>
 						</div>
 						<div class="col list-toggle-checkbox">
-							<input type="checkbox" value="1" class="list-checkbox" name="attr_power-list-toggle"><span></span>
+							<input type="checkbox" value="1" class="list-checkbox"
+								name="attr_power-list-toggle"><span></span>
 						</div>
 					</div>
 					<!-- Show/Hide TALENTS -->
@@ -2818,19 +3057,26 @@
 							<span data-i18n="show-the-talent-list">Show the Talent list in the Character tab</span>
 						</div>
 						<div class="col list-toggle-checkbox">
-							<input type="checkbox" value="1" class="list-checkbox" name="attr_talent-list-toggle"><span></span>
+							<input type="checkbox" value="1" class="list-checkbox"
+								name="attr_talent-list-toggle"><span></span>
 						</div>
 					</div>
 					<!-- Show/Hide MAGIC/PSYCHIC/ARCANA -->
 					<div class="row list-toggle-container">
 						<div class="col list-toggle-text">
-							<span class="modern-age-selected world-of-lazarus-selected fifth-season-selected" data-i18n="show-the-extraordinary-powers-list">Show the Extraordinary Powers list in the Character tab</span>
-							<span class="threefold-selected" data-i18n="show-the-arcana/psychic-list">Show the Arcana/Psychic list in the Character tab</span>
-							<span class="cthulhu-awakens-selected" data-i18n="show-the-psychic-list">Show the Psychic list in the Character tab</span>
-							<span class="no-mod-selected" data-i18n="show-the-spell/arcana-list">Show the Spell/Arcana list in the Character tab</span>
+							<span class="modern-age-selected world-of-lazarus-selected fifth-season-selected"
+								data-i18n="show-the-extraordinary-powers-list">Show the Extraordinary Powers list in the
+								Character tab</span>
+							<span class="threefold-selected" data-i18n="show-the-arcana/psychic-list">Show the
+								Arcana/Psychic list in the Character tab</span>
+							<span class="cthulhu-awakens-selected" data-i18n="show-the-psychic-list">Show the Psychic
+								list in the Character tab</span>
+							<span class="no-mod-selected" data-i18n="show-the-spell/arcana-list">Show the Spell/Arcana
+								list in the Character tab</span>
 						</div>
 						<div class="col list-toggle-checkbox">
-							<input type="checkbox" value="1" class="list-checkbox" name="attr_spell-list-toggle"><span></span>
+							<input type="checkbox" value="1" class="list-checkbox"
+								name="attr_spell-list-toggle"><span></span>
 						</div>
 					</div>
 					<!-- Show/Hide EQUIPMENT -->
@@ -2839,7 +3085,8 @@
 							<span data-i18n="show-the-equipment-section">Show the Equipment section</span>
 						</div>
 						<div class="col list-toggle-checkbox">
-							<input type="checkbox" value="1" class="list-checkbox" name="attr_equipment-toggle"><span></span>
+							<input type="checkbox" value="1" class="list-checkbox"
+								name="attr_equipment-toggle"><span></span>
 						</div>
 					</div>
 					<!-- Show/Hide MONEY -->
@@ -2848,17 +3095,21 @@
 							<span data-i18n="show-the-money/currency-section">Show the Money/Currency section</span>
 						</div>
 						<div class="col list-toggle-checkbox toggle-for-money-section">
-							<input type="checkbox" value="1" class="list-checkbox" name="attr_money-toggle"><span></span>
+							<input type="checkbox" value="1" class="list-checkbox"
+								name="attr_money-toggle"><span></span>
 						</div>
 					</div>
 					<!-- Show/Hide INCOME/RESOURCES -->
 					<div class="row list-toggle-container">
 						<div class="col list-toggle-text">
-							<span class="the-expanse-selected fifth-season-selected" data-i18n="show-the-income-section">Show the Income section</span>
-							<span class="no-the-expanse-selected" data-i18n="show-the-resources-section">Show the Resources section</span>
+							<span class="the-expanse-selected fifth-season-selected"
+								data-i18n="show-the-income-section">Show the Income section</span>
+							<span class="no-the-expanse-selected" data-i18n="show-the-resources-section">Show the
+								Resources section</span>
 						</div>
 						<div class="col list-toggle-checkbox">
-							<input type="checkbox" value="1" class="list-checkbox" name="attr_income-toggle"><span></span>
+							<input type="checkbox" value="1" class="list-checkbox"
+								name="attr_income-toggle"><span></span>
 						</div>
 					</div>
 					<!-- Show/Hide CONDITIONS -->
@@ -2867,12 +3118,16 @@
 							<span data-i18n="show-the-conditions-section">Show the Conditions section</span>
 						</div>
 						<div class="col list-toggle-checkbox">
-							<input type="checkbox" value="1" class="list-checkbox" name="attr_conditions-toggle"><span></span>
+							<input type="checkbox" value="1" class="list-checkbox"
+								name="attr_conditions-toggle"><span></span>
 						</div>
 					</div>
 					<div class="section-name autoconfig">
 						<div class="autoconfig">
-							<button type="action" class="autoconfigure-button" title="Auto-configure the settings above based on your game selection" name="act_autoconfigure"><span data-i18n="auto-configure-all-u">AUTO-CONFIGURE ALL</span></button>
+							<button type="action" class="autoconfigure-button"
+								title="Auto-configure the settings above based on your game selection"
+								name="act_autoconfigure"><span data-i18n="auto-configure-all-u">AUTO-CONFIGURE
+									ALL</span></button>
 						</div>
 					</div>
 				</div>
@@ -2886,7 +3141,8 @@
 							and theDissilent and utilizing the TotalRolled for AGE API script by
 							Joshua Casserino, Olivier L.-L., and theDissilent, with much appreciation
 							from Green Ronin.</p>
-						<p>If you find any bugs, please tell us about them at: https://forms.monday.com/forms/b3ede9f34e9eab8dd2aab4c4b0914a15?r=use1</p>
+						<p>If you find any bugs, please tell us about them at:
+							https://forms.monday.com/forms/b3ede9f34e9eab8dd2aab4c4b0914a15?r=use1</p>
 						<p>Fantasy AGE RPG is ©2015 Green Ronin Publishing, LLC.</p>
 					</span>
 					<span class="about the-expanse-selected">
@@ -2895,7 +3151,8 @@
 							and theDissilent and utilizing the TotalRolled for AGE API script by
 							Joshua Casserino, Olivier L.-L., and theDissilent, with much appreciation
 							from Green Ronin.</p>
-						<p>If you find any bugs, please tell us about them at: https://forms.monday.com/forms/b3ede9f34e9eab8dd2aab4c4b0914a15?r=use1</p>
+						<p>If you find any bugs, please tell us about them at:
+							https://forms.monday.com/forms/b3ede9f34e9eab8dd2aab4c4b0914a15?r=use1</p>
 						<p>The Expanse RPG is ©2019 Green Ronin Publishing, LLC.</p>
 						<p>The Expanse is © 2011-2020 Daniel Abraham and Ty Franck.</p>
 					</span>
@@ -2905,7 +3162,8 @@
 							and theDissilent and utilizing the TotalRolled for AGE API script by
 							Joshua Casserino, Olivier L.-L., and theDissilent, with much appreciation
 							from Green Ronin.</p>
-						<p>If you find any bugs, please tell us about them at: https://forms.monday.com/forms/b3ede9f34e9eab8dd2aab4c4b0914a15?r=use1</p>
+						<p>If you find any bugs, please tell us about them at:
+							https://forms.monday.com/forms/b3ede9f34e9eab8dd2aab4c4b0914a15?r=use1</p>
 						<p>Fifth Season RPG is ©2022 Green Ronin Publishing, LLC.</p>
 						<p>Fifth Season is © 2015-2022 N. K. Jemisin.</p>
 					</span>
@@ -2915,7 +3173,8 @@
 							and theDissilent and utilizing the TotalRolled for AGE API script by
 							Joshua Casserino, Olivier L.-L., and theDissilent, with much appreciation
 							from Green Ronin.</p>
-						<p>If you find any bugs, please tell us about them at: https://forms.monday.com/forms/b3ede9f34e9eab8dd2aab4c4b0914a15?r=use1</p>
+						<p>If you find any bugs, please tell us about them at:
+							https://forms.monday.com/forms/b3ede9f34e9eab8dd2aab4c4b0914a15?r=use1</p>
 						<p>Cthulhu Awakens RPG is ©2022 Green Ronin Publishing, LLC.</p>
 					</span>
 				</div>
@@ -2932,327 +3191,370 @@
 <rolltemplate class="sheet-rolltemplate-age-roller">
 	<div class="sheet-age-roller-container">
 
-		{{#color-black}} <div class="sheet-age-roller-title sheet-age-roller-color-black">{{#player}}{{player}}{{/player}}{{#desc}}{{desc}}{{/desc}} </div> {{/color-black}}
-		{{#color-red}} <div class="sheet-age-roller-title sheet-age-roller-color-red">{{#player}}{{player}}{{/player}}{{#desc}}{{desc}}{{/desc}} </div> {{/color-red}}
-		{{#color-blue1}} <div class="sheet-age-roller-title sheet-age-roller-color-blue1">{{#player}}{{player}}{{/player}}{{#desc}}{{desc}}{{/desc}} </div> {{/color-blue1}}
-		{{#color-blue2}} <div class="sheet-age-roller-title sheet-age-roller-color-blue2">{{#player}}{{player}}{{/player}}{{#desc}}{{desc}}{{/desc}} </div> {{/color-blue2}}
-		{{#color-teal1}} <div class="sheet-age-roller-title sheet-age-roller-color-teal1">{{#player}}{{player}}{{/player}}{{#desc}}{{desc}}{{/desc}} </div> {{/color-teal1}}
-		{{#color-teal2}} <div class="sheet-age-roller-title sheet-age-roller-color-teal2">{{#player}}{{player}}{{/player}}{{#desc}}{{desc}}{{/desc}} </div> {{/color-teal2}}
-		{{#color-green}} <div class="sheet-age-roller-title sheet-age-roller-color-green">{{#player}}{{player}}{{/player}}{{#desc}}{{desc}}{{/desc}} </div> {{/color-green}}
-		{{#color-orange}} <div class="sheet-age-roller-title sheet-age-roller-color-orange">{{#player}}{{player}}{{/player}}{{#desc}}{{desc}}{{/desc}} </div> {{/color-orange}}
-		{{#color-stars}}<div class="sheet-age-roller-title sheet-age-roller-color-stars">{{#player}}{{player}}{{/player}}{{#desc}}{{desc}}{{/desc}} </div>{{/color-stars}}
-		{{#color-threefold}}<div class="sheet-age-roller-title sheet-age-roller-color-threefold">{{#player}}{{player}}{{/player}}{{#desc}}{{desc}}{{/desc}} </div>{{/color-threefold}}
-		{{#color-lazarus}}<div class="sheet-age-roller-title sheet-age-roller-color-lazarus">{{#player}}{{player}}{{/player}}{{#desc}}{{desc}}{{/desc}} </div>{{/color-lazarus}}
-		{{#color-rainbow}}<div class="sheet-age-roller-title sheet-age-roller-color-rainbow">{{#player}}{{player}}{{/player}}{{#desc}}{{desc}}{{/desc}} </div>{{/color-rainbow}}
-		{{#color-dragon}}<div class="sheet-age-roller-title sheet-age-roller-color-dragon">{{#player}}{{player}}{{/player}}{{#desc}}{{desc}}{{/desc}} </div>{{/color-dragon}}
+		{{#color-black}} <div class="sheet-age-roller-title sheet-age-roller-color-black">
+			{{#player}}{{player}}{{/player}}{{#desc}}{{desc}}{{/desc}} </div> {{/color-black}}
+		{{#color-red}} <div class="sheet-age-roller-title sheet-age-roller-color-red">
+			{{#player}}{{player}}{{/player}}{{#desc}}{{desc}}{{/desc}} </div> {{/color-red}}
+		{{#color-blue1}} <div class="sheet-age-roller-title sheet-age-roller-color-blue1">
+			{{#player}}{{player}}{{/player}}{{#desc}}{{desc}}{{/desc}} </div> {{/color-blue1}}
+		{{#color-blue2}} <div class="sheet-age-roller-title sheet-age-roller-color-blue2">
+			{{#player}}{{player}}{{/player}}{{#desc}}{{desc}}{{/desc}} </div> {{/color-blue2}}
+		{{#color-teal1}} <div class="sheet-age-roller-title sheet-age-roller-color-teal1">
+			{{#player}}{{player}}{{/player}}{{#desc}}{{desc}}{{/desc}} </div> {{/color-teal1}}
+		{{#color-teal2}} <div class="sheet-age-roller-title sheet-age-roller-color-teal2">
+			{{#player}}{{player}}{{/player}}{{#desc}}{{desc}}{{/desc}} </div> {{/color-teal2}}
+		{{#color-green}} <div class="sheet-age-roller-title sheet-age-roller-color-green">
+			{{#player}}{{player}}{{/player}}{{#desc}}{{desc}}{{/desc}} </div> {{/color-green}}
+		{{#color-orange}} <div class="sheet-age-roller-title sheet-age-roller-color-orange">
+			{{#player}}{{player}}{{/player}}{{#desc}}{{desc}}{{/desc}} </div> {{/color-orange}}
+		{{#color-stars}}<div class="sheet-age-roller-title sheet-age-roller-color-stars">
+			{{#player}}{{player}}{{/player}}{{#desc}}{{desc}}{{/desc}} </div>{{/color-stars}}
+		{{#color-threefold}}<div class="sheet-age-roller-title sheet-age-roller-color-threefold">
+			{{#player}}{{player}}{{/player}}{{#desc}}{{desc}}{{/desc}} </div>{{/color-threefold}}
+		{{#color-lazarus}}<div class="sheet-age-roller-title sheet-age-roller-color-lazarus">
+			{{#player}}{{player}}{{/player}}{{#desc}}{{desc}}{{/desc}} </div>{{/color-lazarus}}
+		{{#color-rainbow}}<div class="sheet-age-roller-title sheet-age-roller-color-rainbow">
+			{{#player}}{{player}}{{/player}}{{#desc}}{{desc}}{{/desc}} </div>{{/color-rainbow}}
+		{{#color-dragon}}<div class="sheet-age-roller-title sheet-age-roller-color-dragon">
+			{{#player}}{{player}}{{/player}}{{#desc}}{{desc}}{{/desc}} </div>{{/color-dragon}}
 
 		{{#drama}}
-			<div class="sheet-age-roller-result">
-				<span class="sheet-die-face">
-					{{#rollTotal() die1 1}}a{{/rollTotal() die1 1}}
-					{{#rollTotal() die1 2}}b{{/rollTotal() die1 2}}
-					{{#rollTotal() die1 3}}c{{/rollTotal() die1 3}}
-					{{#rollTotal() die1 4}}d{{/rollTotal() die1 4}}
-					{{#rollTotal() die1 5}}e{{/rollTotal() die1 5}}
-					{{#rollTotal() die1 6}}f{{/rollTotal() die1 6}}
-				</span>
-				<span class="sheet-die-face">
-					{{#rollTotal() die2 1}}a{{/rollTotal() die2 1}}
-					{{#rollTotal() die2 2}}b{{/rollTotal() die2 2}}
-					{{#rollTotal() die2 3}}c{{/rollTotal() die2 3}}
-					{{#rollTotal() die2 4}}d{{/rollTotal() die2 4}}
-					{{#rollTotal() die2 5}}e{{/rollTotal() die2 5}}
-					{{#rollTotal() die2 6}}f{{/rollTotal() die2 6}}
-				</span>
-				{{#color-black}} <span class="sheet-die-face sheet-die-face-drama sheet-color-black"> {{/color-black}}
+		<div class="sheet-age-roller-result">
+			<span class="sheet-die-face">
+				{{#rollTotal() die1 1}}a{{/rollTotal() die1 1}}
+				{{#rollTotal() die1 2}}b{{/rollTotal() die1 2}}
+				{{#rollTotal() die1 3}}c{{/rollTotal() die1 3}}
+				{{#rollTotal() die1 4}}d{{/rollTotal() die1 4}}
+				{{#rollTotal() die1 5}}e{{/rollTotal() die1 5}}
+				{{#rollTotal() die1 6}}f{{/rollTotal() die1 6}}
+			</span>
+			<span class="sheet-die-face">
+				{{#rollTotal() die2 1}}a{{/rollTotal() die2 1}}
+				{{#rollTotal() die2 2}}b{{/rollTotal() die2 2}}
+				{{#rollTotal() die2 3}}c{{/rollTotal() die2 3}}
+				{{#rollTotal() die2 4}}d{{/rollTotal() die2 4}}
+				{{#rollTotal() die2 5}}e{{/rollTotal() die2 5}}
+				{{#rollTotal() die2 6}}f{{/rollTotal() die2 6}}
+			</span>
+			{{#color-black}} <span class="sheet-die-face sheet-die-face-drama sheet-color-black"> {{/color-black}}
 				{{#color-red}} <span class="sheet-die-face sheet-die-face-drama sheet-color-red"> {{/color-red}}
-				{{#color-blue1}} <span class="sheet-die-face sheet-die-face-drama sheet-color-blue1"> {{/color-blue1}}
-				{{#color-blue2}} <span class="sheet-die-face sheet-die-face-drama sheet-color-blue2"> {{/color-blue2}}
-				{{#color-teal1}} <span class="sheet-die-face sheet-die-face-drama sheet-color-teal1"> {{/color-teal1}}
-				{{#color-teal2}} <span class="sheet-die-face sheet-die-face-drama sheet-color-teal2"> {{/color-teal2}}
-				{{#color-orange}} <span class="sheet-die-face sheet-die-face-drama sheet-color-orange"> {{/color-orange}}
-				{{#color-green}} <span class="sheet-die-face sheet-die-face-drama sheet-color-green"> {{/color-green}}
-				{{#color-threefold}} <span class="sheet-die-face sheet-die-face-drama sheet-color-threefold"> {{/color-threefold}}
-				{{#color-lazarus}} <span class="sheet-die-face sheet-die-face-drama sheet-color-lazarus"> {{/color-lazarus}}
-				{{#color-stars}} <span class="sheet-die-face sheet-die-face-drama sheet-color-stars"> {{/color-stars}}
-				{{#color-rainbow}} <span class="sheet-die-face sheet-die-face-drama sheet-color-rainbow"> {{/color-rainbow}}
-				{{#color-dragon}} <span class="sheet-die-face sheet-die-face-drama sheet-color-dragon"> {{/color-dragon}}
+					{{#color-blue1}} <span class="sheet-die-face sheet-die-face-drama sheet-color-blue1">
+						{{/color-blue1}}
+						{{#color-blue2}} <span class="sheet-die-face sheet-die-face-drama sheet-color-blue2">
+							{{/color-blue2}}
+							{{#color-teal1}} <span class="sheet-die-face sheet-die-face-drama sheet-color-teal1">
+								{{/color-teal1}}
+								{{#color-teal2}} <span class="sheet-die-face sheet-die-face-drama sheet-color-teal2">
+									{{/color-teal2}}
+									{{#color-orange}} <span
+										class="sheet-die-face sheet-die-face-drama sheet-color-orange">
+										{{/color-orange}}
+										{{#color-green}} <span
+											class="sheet-die-face sheet-die-face-drama sheet-color-green">
+											{{/color-green}}
+											{{#color-threefold}} <span
+												class="sheet-die-face sheet-die-face-drama sheet-color-threefold">
+												{{/color-threefold}}
+												{{#color-lazarus}} <span
+													class="sheet-die-face sheet-die-face-drama sheet-color-lazarus">
+													{{/color-lazarus}}
+													{{#color-stars}} <span
+														class="sheet-die-face sheet-die-face-drama sheet-color-stars">
+														{{/color-stars}}
+														{{#color-rainbow}} <span
+															class="sheet-die-face sheet-die-face-drama sheet-color-rainbow">
+															{{/color-rainbow}}
+															{{#color-dragon}} <span
+																class="sheet-die-face sheet-die-face-drama sheet-color-dragon">
+																{{/color-dragon}}
 
-					{{#rollTotal() drama 1}}a{{/rollTotal() drama 1}}
-					{{#rollTotal() drama 2}}b{{/rollTotal() drama 2}}
-					{{#rollTotal() drama 3}}c{{/rollTotal() drama 3}}
-					{{#rollTotal() drama 4}}d{{/rollTotal() drama 4}}
-					{{#rollTotal() drama 5}}e{{/rollTotal() drama 5}}
-					{{#rollTotal() drama 6}}f{{/rollTotal() drama 6}}
+																{{#rollTotal() drama 1}}a{{/rollTotal() drama 1}}
+																{{#rollTotal() drama 2}}b{{/rollTotal() drama 2}}
+																{{#rollTotal() drama 3}}c{{/rollTotal() drama 3}}
+																{{#rollTotal() drama 4}}d{{/rollTotal() drama 4}}
+																{{#rollTotal() drama 5}}e{{/rollTotal() drama 5}}
+																{{#rollTotal() drama 6}}f{{/rollTotal() drama 6}}
 
-					{{#^rollTotal() drama2 0}}<span style="color: #983fae">
-						<span class="sheet-die-seperator">|</span>
-						{{#rollTotal() drama2 1}}a{{/rollTotal() drama2 1}}
-						{{#rollTotal() drama2 2}}b{{/rollTotal() drama2 2}}
-						{{#rollTotal() drama2 3}}c{{/rollTotal() drama2 3}}
-						{{#rollTotal() drama2 4}}d{{/rollTotal() drama2 4}}
-						{{#rollTotal() drama2 5}}e{{/rollTotal() drama2 5}}
-						{{#rollTotal() drama2 6}}f{{/rollTotal() drama2 6}}
-					</span>{{/^rollTotal() drama2 0}}
-				</span>
-			</div>
+																{{#^rollTotal() drama2 0}}<span style="color: #983fae">
+																	<span class="sheet-die-seperator">|</span>
+																	{{#rollTotal() drama2 1}}a{{/rollTotal() drama2 1}}
+																	{{#rollTotal() drama2 2}}b{{/rollTotal() drama2 2}}
+																	{{#rollTotal() drama2 3}}c{{/rollTotal() drama2 3}}
+																	{{#rollTotal() drama2 4}}d{{/rollTotal() drama2 4}}
+																	{{#rollTotal() drama2 5}}e{{/rollTotal() drama2 5}}
+																	{{#rollTotal() drama2 6}}f{{/rollTotal() drama2 6}}
+																</span>{{/^rollTotal() drama2 0}}
+															</span>
+		</div>
 		{{/drama}}
 
 		{{#mod}}
-			<div class="sheet-age-roller-line">
-				<div class="sheet-age-roller-col1 sheet-age-roller-ability">
-					{{#ability}}{{ability}}{{/ability}}
-				</div>
-				<div class="sheet-age-roller-col2 sheet-age-roller-mod">
-					{{#rollGreater() mod 0}}+{{/rollGreater() mod 0}}{{mod}}
-				</div>
+		<div class="sheet-age-roller-line">
+			<div class="sheet-age-roller-col1 sheet-age-roller-ability">
+				{{#ability}}{{ability}}{{/ability}}
 			</div>
+			<div class="sheet-age-roller-col2 sheet-age-roller-mod">
+				{{#rollGreater() mod 0}}+{{/rollGreater() mod 0}}{{mod}}
+			</div>
+		</div>
 		{{/mod}}
 
 		{{#damage}}
-			<div class="sheet-age-roller-line">
-				<div class="sheet-age-roller-col1">
-					<span data-i18n="damage">Damage</span>{{#damagedice}}: {{damagedice}}{{/damagedice}}
-				</div>
-				<div class="sheet-age-roller-col2">
-					{{damage}}
-				</div>
+		<div class="sheet-age-roller-line">
+			<div class="sheet-age-roller-col1">
+				<span data-i18n="damage">Damage</span>{{#damagedice}}: {{damagedice}}{{/damagedice}}
 			</div>
+			<div class="sheet-age-roller-col2">
+				{{damage}}
+			</div>
+		</div>
 		{{/damage}}
 
 		{{#^rollTotal() aimcheck 0}}
-			<div class="sheet-age-roller-line">
-				<div class="sheet-age-roller-col1">
-					Aim
-				</div>
-				<div class="sheet-age-roller-col2">
-					{{aimcheck}}
-				</div>
+		<div class="sheet-age-roller-line">
+			<div class="sheet-age-roller-col1">
+				Aim
 			</div>
+			<div class="sheet-age-roller-col2">
+				{{aimcheck}}
+			</div>
+		</div>
 		{{/^rollTotal() aimcheck 0}}
 
 		{{#extramod1}}
-			{{#^rollTotal() extramod1 0}}
-				<div class="sheet-age-roller-line">
-					<div class="sheet-age-roller-col1">
-						{{#extramod1-name}}{{extramod1-name}}{{/extramod1-name}}
-					</div>
-					<div class="sheet-age-roller-col2">
-						{{#rollGreater() extramod1 0}}+{{/rollGreater() extramod1 0}}{{extramod1}}
-					</div>
-				</div>
-			{{/^rollTotal() extramod1 0}}
+		{{#^rollTotal() extramod1 0}}
+		<div class="sheet-age-roller-line">
+			<div class="sheet-age-roller-col1">
+				{{#extramod1-name}}{{extramod1-name}}{{/extramod1-name}}
+			</div>
+			<div class="sheet-age-roller-col2">
+				{{#rollGreater() extramod1 0}}+{{/rollGreater() extramod1 0}}{{extramod1}}
+			</div>
+		</div>
+		{{/^rollTotal() extramod1 0}}
 		{{/extramod1}}
 
 		{{#extramod2}}
-			{{#^rollTotal() extramod2 0}}
-				<div class="sheet-age-roller-line">
-					<div class="sheet-age-roller-col1">
-						{{#extramod2-name}}{{extramod2-name}}{{/extramod2-name}}
-					</div>
-					<div class="sheet-age-roller-col2">
-						{{#rollGreater() extramod2 0}}+{{/rollGreater() extramod2 0}}{{extramod2}}
-					</div>
-				</div>
-			{{/^rollTotal() extramod2 0}}
+		{{#^rollTotal() extramod2 0}}
+		<div class="sheet-age-roller-line">
+			<div class="sheet-age-roller-col1">
+				{{#extramod2-name}}{{extramod2-name}}{{/extramod2-name}}
+			</div>
+			<div class="sheet-age-roller-col2">
+				{{#rollGreater() extramod2 0}}+{{/rollGreater() extramod2 0}}{{extramod2}}
+			</div>
+		</div>
+		{{/^rollTotal() extramod2 0}}
 		{{/extramod2}}
 
 		{{#extramod3}}
-			{{#^rollTotal() extramod3 0}}
-				<div class="sheet-age-roller-line">
-					<div class="sheet-age-roller-col1">
-						{{#extramod3-name}}{{extramod3-name}}{{/extramod3-name}}
-					</div>
-					<div class="sheet-age-roller-col2">
-						{{#rollGreater() extramod3 0}}+{{/rollGreater() extramod3 0}}{{extramod3}}
-					</div>
-				</div>
-			{{/^rollTotal() extramod3 0}}
+		{{#^rollTotal() extramod3 0}}
+		<div class="sheet-age-roller-line">
+			<div class="sheet-age-roller-col1">
+				{{#extramod3-name}}{{extramod3-name}}{{/extramod3-name}}
+			</div>
+			<div class="sheet-age-roller-col2">
+				{{#rollGreater() extramod3 0}}+{{/rollGreater() extramod3 0}}{{extramod3}}
+			</div>
+		</div>
+		{{/^rollTotal() extramod3 0}}
 		{{/extramod3}}
 
 		{{#extramod4}}
-			{{#^rollTotal() extramod4 0}}
-				<div class="sheet-age-roller-line">
-					<div class="sheet-age-roller-col1">
-						{{#extramod4-name}}{{extramod4-name}}{{/extramod4-name}}
-					</div>
-					<div class="sheet-age-roller-col2">
-						{{#rollGreater() extramod4 0}}+{{/rollGreater() extramod4 0}}{{extramod4}}
-					</div>
-				</div>
-			{{/^rollTotal() extramod4 0}}
+		{{#^rollTotal() extramod4 0}}
+		<div class="sheet-age-roller-line">
+			<div class="sheet-age-roller-col1">
+				{{#extramod4-name}}{{extramod4-name}}{{/extramod4-name}}
+			</div>
+			<div class="sheet-age-roller-col2">
+				{{#rollGreater() extramod4 0}}+{{/rollGreater() extramod4 0}}{{extramod4}}
+			</div>
+		</div>
+		{{/^rollTotal() extramod4 0}}
 		{{/extramod4}}
 
 		{{#rollGreater() fatigue 0}}
-			<div class="sheet-age-roller-line">
-				<div class="sheet-age-roller-col1">
-					<span data-i18n="fatigue">Fatigue</span>
-				</div>
-				<div class="sheet-age-roller-col2">
-					{{#fatigue}}
-						-{{fatigue}}
-					{{/fatigue}}
-				</div>
+		<div class="sheet-age-roller-line">
+			<div class="sheet-age-roller-col1">
+				<span data-i18n="fatigue">Fatigue</span>
 			</div>
+			<div class="sheet-age-roller-col2">
+				{{#fatigue}}
+				-{{fatigue}}
+				{{/fatigue}}
+			</div>
+		</div>
 		{{/rollGreater() fatigue 0}}
 
 		{{#tiebreaker}}
-			{{#^rollTotal() tiebreaker 0}}
-				<div class="sheet-age-roller-line">
-					<div class="sheet-age-roller-col1">
-						<span data-i18n="stunt_die">Stunt Die</span> * 0.1
-					</div>
-					<div class="sheet-age-roller-col2">
-						+0.{{drama}}
-					</div>
-				</div>
-				<div class="sheet-age-roller-line">
-					<div class="sheet-age-roller-col1">
-						{{ability}} * 0.01
-					</div>
-					<div class="sheet-age-roller-col2">
-						{{#rollGreater() mod 0}}+{{/rollGreater() mod 0}}{{tiebreaker2}}
-					</div>
-				</div>
-			{{/^rollTotal() tiebreaker 0}}
+		{{#^rollTotal() tiebreaker 0}}
+		<div class="sheet-age-roller-line">
+			<div class="sheet-age-roller-col1">
+				<span data-i18n="stunt_die">Stunt Die</span> * 0.1
+			</div>
+			<div class="sheet-age-roller-col2">
+				+0.{{drama}}
+			</div>
+		</div>
+		<div class="sheet-age-roller-line">
+			<div class="sheet-age-roller-col1">
+				{{ability}} * 0.01
+			</div>
+			<div class="sheet-age-roller-col2">
+				{{#rollGreater() mod 0}}+{{/rollGreater() mod 0}}{{tiebreaker2}}
+			</div>
+		</div>
+		{{/^rollTotal() tiebreaker 0}}
 		{{/tiebreaker}}
 
 		{{#total}}
-			<div class="sheet-age-roller-total sheet-age-roller-line">
-				<span class="sheet-age-roller-col1" data-i18n="total">Total</span>
-				<span class="sheet-age-roller-col2">{{computed::total}}</span>
-			</div>
+		<div class="sheet-age-roller-total sheet-age-roller-line">
+			<span class="sheet-age-roller-col1" data-i18n="total">Total</span>
+			<span class="sheet-age-roller-col2">{{computed::total}}</span>
+		</div>
 		{{/total}}
 
 		{{#tn}}
-			<div class="sheet-age-roller-line sheet-age-roller-tn">
-				<span class="sheet-age-roller-col1" data-i18n="target_number">
-					Target Number
-				</span>
-				<span class="sheet-age-roller-col2">
-					{{tn}}
-				</span>
-			</div>
+		<div class="sheet-age-roller-line sheet-age-roller-tn">
+			<span class="sheet-age-roller-col1" data-i18n="target_number">
+				Target Number
+			</span>
+			<span class="sheet-age-roller-col2">
+				{{tn}}
+			</span>
+		</div>
 		{{/tn}}
 
 		{{#note1}}
-			<div class="sheet-age-roller-line sheet-age-roller-tn">
-				<span class="sheet-age-roller-col1">
-					{{note1-name}}
-				</span>
-				<span class="sheet-age-roller-col2">
-					{{note1}}
-				</span>
-			</div>
+		<div class="sheet-age-roller-line sheet-age-roller-tn">
+			<span class="sheet-age-roller-col1">
+				{{note1-name}}
+			</span>
+			<span class="sheet-age-roller-col2">
+				{{note1}}
+			</span>
+		</div>
 		{{/note1}}
 
 		{{#note2}}
-			<div class="sheet-age-roller-line sheet-age-roller-tn">
-				<span class="sheet-age-roller-col1">
-					{{note2-name}}
-				</span>
-				<span class="sheet-age-roller-col2">
-					{{note2}}
-				</span>
-			</div>
+		<div class="sheet-age-roller-line sheet-age-roller-tn">
+			<span class="sheet-age-roller-col1">
+				{{note2-name}}
+			</span>
+			<span class="sheet-age-roller-col2">
+				{{note2}}
+			</span>
+		</div>
 		{{/note2}}
 
 		{{#note3}}
-			<div class="sheet-age-roller-line sheet-age-roller-tn">
-				<span class="sheet-age-roller-col1">
-					{{note3-name}}
-				</span>
-				<span class="sheet-age-roller-col2">
-					{{note3}}
-				</span>
-			</div>
+		<div class="sheet-age-roller-line sheet-age-roller-tn">
+			<span class="sheet-age-roller-col1">
+				{{note3-name}}
+			</span>
+			<span class="sheet-age-roller-col2">
+				{{note3}}
+			</span>
+		</div>
 		{{/note3}}
 
 		{{#note4}}
-			<div class="sheet-age-roller-line sheet-age-roller-tn">
-				<span class="sheet-age-roller-col1">
-					{{note4-name}}
-				</span>
-				<span class="sheet-age-roller-col2">
-					{{note4}}
-				</span>
-			</div>
+		<div class="sheet-age-roller-line sheet-age-roller-tn">
+			<span class="sheet-age-roller-col1">
+				{{note4-name}}
+			</span>
+			<span class="sheet-age-roller-col2">
+				{{note4}}
+			</span>
+		</div>
 		{{/note4}}
 
 		{{#note5}}
-			<div class="sheet-age-roller-line sheet-age-roller-tn">
-				<span class="sheet-age-roller-col1">
-					{{note5-name}}
-				</span>
-				<span class="sheet-age-roller-col2">
-					{{note5}}
-				</span>
-			</div>
+		<div class="sheet-age-roller-line sheet-age-roller-tn">
+			<span class="sheet-age-roller-col1">
+				{{note5-name}}
+			</span>
+			<span class="sheet-age-roller-col2">
+				{{note5}}
+			</span>
+		</div>
 		{{/note5}}
 
 		{{#note6}}
-			<div class="sheet-age-roller-line sheet-age-roller-tn">
-				<span class="sheet-age-roller-col1">
-					{{note6-name}}
-				</span>
-				<span class="sheet-age-roller-col2">
-					{{note6}}
-				</span>
-			</div>
+		<div class="sheet-age-roller-line sheet-age-roller-tn">
+			<span class="sheet-age-roller-col1">
+				{{note6-name}}
+			</span>
+			<span class="sheet-age-roller-col2">
+				{{note6}}
+			</span>
+		</div>
 		{{/note6}}
 
 		{{#rollTotal() die1 die2}}
-			{{^drama2}}
-				<div class="sheet-age-roller-line sheet-age-roller-stunt">
-					<span class="sheet-age-roller-stunt-dice-label sheet-age-roller-col1" data-i18n="stunt_points">Stunt Points</span><span class="sheet-age-roller-stunt-dice sheet-age-roller-col2">{{drama}}</span>
-				</div>
-			{{/drama2}}
-			{{#rollTotal() drama2 0}}
-				<div class="sheet-age-roller-line sheet-age-roller-stunt">
-					<span class="sheet-age-roller-stunt-dice-label sheet-age-roller-col1" data-i18n="stunt_points">Stunt Points</span><span class="sheet-age-roller-stunt-dice sheet-age-roller-col2">{{drama}}</span>
-				</div>
-			{{/rollTotal() drama2 0}}
-			{{#^rollTotal() drama2 0}}
-				<div class="sheet-age-roller-line sheet-age-roller-stunt">
-					<span class="sheet-age-roller-stunt-dice-label sheet-age-roller-col1" data-i18n="stunt_points">Stunt Points</span><span class="sheet-age-roller-stunt-dice sheet-age-roller-col2">{{drama}} or {{drama2}}</span>
-				</div>
-			{{/^rollTotal() drama2 0}}
+		{{^drama2}}
+		<div class="sheet-age-roller-line sheet-age-roller-stunt">
+			<span class="sheet-age-roller-stunt-dice-label sheet-age-roller-col1" data-i18n="stunt_points">Stunt
+				Points</span><span class="sheet-age-roller-stunt-dice sheet-age-roller-col2">{{drama}}</span>
+		</div>
+		{{/drama2}}
+		{{#rollTotal() drama2 0}}
+		<div class="sheet-age-roller-line sheet-age-roller-stunt">
+			<span class="sheet-age-roller-stunt-dice-label sheet-age-roller-col1" data-i18n="stunt_points">Stunt
+				Points</span><span class="sheet-age-roller-stunt-dice sheet-age-roller-col2">{{drama}}</span>
+		</div>
+		{{/rollTotal() drama2 0}}
+		{{#^rollTotal() drama2 0}}
+		<div class="sheet-age-roller-line sheet-age-roller-stunt">
+			<span class="sheet-age-roller-stunt-dice-label sheet-age-roller-col1" data-i18n="stunt_points">Stunt
+				Points</span><span class="sheet-age-roller-stunt-dice sheet-age-roller-col2">{{drama}} or
+				{{drama2}}</span>
+		</div>
+		{{/^rollTotal() drama2 0}}
 		{{/rollTotal() die1 die2}}
 
 		{{#rollTotal() die1 drama}}
-			{{^drama2}}
-				<div class="sheet-age-roller-line sheet-age-roller-stunt">
-					<span class="sheet-age-roller-stunt-dice-label sheet-age-roller-col1" data-i18n="stunt_points">Stunt Points</span><span class="sheet-age-roller-stunt-dice sheet-age-roller-col2">{{drama}}</span>
-				</div>
-			{{/drama2}}
-			{{#rollTotal() drama2 0}}
-				<div class="sheet-age-roller-line sheet-age-roller-stunt">
-					<span class="sheet-age-roller-stunt-dice-label sheet-age-roller-col1" data-i18n="stunt_points">Stunt Points</span><span class="sheet-age-roller-stunt-dice sheet-age-roller-col2">{{drama}}</span>
-				</div>
-			{{/rollTotal() drama2 0}}
-			{{#^rollTotal() drama2 0}}
-				<div class="sheet-age-roller-line sheet-age-roller-stunt">
-					<span class="sheet-age-roller-stunt-dice-label sheet-age-roller-col1" data-i18n="stunt_points">Stunt Points</span><span class="sheet-age-roller-stunt-dice sheet-age-roller-col2">{{drama}} or {{drama2}}</span>
-				</div>
-			{{/^rollTotal() drama2 0}}
+		{{^drama2}}
+		<div class="sheet-age-roller-line sheet-age-roller-stunt">
+			<span class="sheet-age-roller-stunt-dice-label sheet-age-roller-col1" data-i18n="stunt_points">Stunt
+				Points</span><span class="sheet-age-roller-stunt-dice sheet-age-roller-col2">{{drama}}</span>
+		</div>
+		{{/drama2}}
+		{{#rollTotal() drama2 0}}
+		<div class="sheet-age-roller-line sheet-age-roller-stunt">
+			<span class="sheet-age-roller-stunt-dice-label sheet-age-roller-col1" data-i18n="stunt_points">Stunt
+				Points</span><span class="sheet-age-roller-stunt-dice sheet-age-roller-col2">{{drama}}</span>
+		</div>
+		{{/rollTotal() drama2 0}}
+		{{#^rollTotal() drama2 0}}
+		<div class="sheet-age-roller-line sheet-age-roller-stunt">
+			<span class="sheet-age-roller-stunt-dice-label sheet-age-roller-col1" data-i18n="stunt_points">Stunt
+				Points</span><span class="sheet-age-roller-stunt-dice sheet-age-roller-col2">{{drama}} or
+				{{drama2}}</span>
+		</div>
+		{{/^rollTotal() drama2 0}}
 		{{/rollTotal() die1 drama}}
 
 		{{#rollTotal() die2 drama}}
-			{{^drama2}}
-				<div class="sheet-age-roller-line sheet-age-roller-stunt">
-					<span class="sheet-age-roller-stunt-dice-label sheet-age-roller-col1" data-i18n="stunt_points">Stunt Points</span><span class="sheet-age-roller-stunt-dice sheet-age-roller-col2">{{drama}}</span>
-				</div>
-			{{/drama2}}
-			{{#rollTotal() drama2 0}}
-				<div class="sheet-age-roller-line sheet-age-roller-stunt">
-					<span class="sheet-age-roller-stunt-dice-label sheet-age-roller-col1" data-i18n="stunt_points">Stunt Points</span><span class="sheet-age-roller-stunt-dice sheet-age-roller-col2">{{drama}}</span>
-				</div>
-			{{/rollTotal() drama2 0}}
-			{{#^rollTotal() drama2 0}}
-				<div class="sheet-age-roller-line sheet-age-roller-stunt">
-					<span class="sheet-age-roller-stunt-dice-label sheet-age-roller-col1" data-i18n="stunt_points">Stunt Points</span><span class="sheet-age-roller-stunt-dice sheet-age-roller-col2">{{drama}} or {{drama2}}</span>
-				</div>
-			{{/^rollTotal() drama2 0}}
+		{{^drama2}}
+		<div class="sheet-age-roller-line sheet-age-roller-stunt">
+			<span class="sheet-age-roller-stunt-dice-label sheet-age-roller-col1" data-i18n="stunt_points">Stunt
+				Points</span><span class="sheet-age-roller-stunt-dice sheet-age-roller-col2">{{drama}}</span>
+		</div>
+		{{/drama2}}
+		{{#rollTotal() drama2 0}}
+		<div class="sheet-age-roller-line sheet-age-roller-stunt">
+			<span class="sheet-age-roller-stunt-dice-label sheet-age-roller-col1" data-i18n="stunt_points">Stunt
+				Points</span><span class="sheet-age-roller-stunt-dice sheet-age-roller-col2">{{drama}}</span>
+		</div>
+		{{/rollTotal() drama2 0}}
+		{{#^rollTotal() drama2 0}}
+		<div class="sheet-age-roller-line sheet-age-roller-stunt">
+			<span class="sheet-age-roller-stunt-dice-label sheet-age-roller-col1" data-i18n="stunt_points">Stunt
+				Points</span><span class="sheet-age-roller-stunt-dice sheet-age-roller-col2">{{drama}} or
+				{{drama2}}</span>
+		</div>
+		{{/^rollTotal() drama2 0}}
 		{{/rollTotal() die2 drama}}
 	</div>
 </rolltemplate>
@@ -3810,7 +4112,276 @@
 		}); // getAttrs
 	}); // on opened/changes
 
+	on("change:shield-equip", (event) => {
+		console.log("shield-equip clicked");
+		getAttrs(["repeating_shield_shield-name", "shield-name", "shield-bonus", "shield-cost", "shield-qualities"], (v) => {
+			
+			console.log(v);
+		})
+		console.log(event);
+	})
+
 	console.log("Script load complete");
+
+	console.log("!!!! Setting up drop handler");
+  on("change:drop_data", function(event_info) {
+    console.log("Got drop: ", event_info);
+    getAttrs(["drop_category", "drop_name","drop_data"], values => {
+      const {drop_name, drop_data, drop_category} = values;
+      if (drop_category === "" || drop_name === "" || drop_data === "") {
+        return
+      };
+      var dropDataParsed = JSON.parse(drop_data);
+      dropDataParsed["name"] = drop_name;
+      console.log("drop_category: ", drop_category, "drop_name: ", drop_name, "DropDataParsed: ", dropDataParsed);
+      const specializationToAttrs = {
+        "name": "powername",
+        "Description": "talentdescription",
+        "Novice": "talent1description",
+        "Expert": "talent2description",
+        "Master": "talent3description",
+        "Grandmaster": "talent4description",
+        "Apex": "talent5description"
+      };
+      const talentToAttrs = {
+        "name": "powername",
+        "Description": "talentdescription",
+        "Novice": "talent1description",
+        "Expert": "talent2description",
+        "Master": "talent3description"
+      };
+      const focusToAttrs = {
+        "name": "focusname",
+        "Description": "focusdescription"
+      };
+	  const shieldToAttrs = {
+		"name": "shield-name",
+		"Bonus": "shield-bonus",
+		"Cost": "shield-cost",
+		"Qualities": "shield-qualities"
+	  };
+	  const armorToAttrs = {
+		"name": "armor-name",
+		"Bonus": "armor-bonus",
+		"Penalty": "armor-penalty",
+		"DefenceBonus": "defense-bonus"
+	  };
+      const psychicDisciplineToAttrs = {
+        "name": "spell-name",
+        "Discipline": "spell-talent",
+        "Type": "spell-type",
+        "Requirement": "", // TODO
+        "Time": "spell-time",
+        "Power Test": "spell-tn",
+        "Price Test": "spell-fatigue",
+        "Resist": "spell-resistance",
+        "Short Description": "short-spell-description",
+        "Description": "full-spell-description",
+        "Damage": "" // TODO
+      };
+      const backgroundToAttrs = {
+        "name": "background",
+        "Social Class": "social-class"
+      };
+      const professionToAttrs = {
+        "name": "profession"
+      };
+      const gearToAttrs = {
+        "name": "equipment-name",
+        "Description": "equipment-description"
+      };
+      const weaponToAttrs = {
+        "name": "attack-name",
+        "Range": "range",
+        "Reload": "reload",
+        "Damage": "attack-damage"
+      }
+      const eldritchWorkingToAttrs = {
+        "name": "eldritch_working_name",
+        "Generic Name": "generic_name",
+        "Alienation Test Type": "alienation_test_type",
+        "Alienation Test TN": "alienation_test_tn",
+        "Praxis": "praxis",
+        "Interval": "interval",
+        "Rote Test 1 Ability": "rotetest1_ability",
+        "Rote Test 1 Focus": "rotetest1_focus",
+        "Rote Test 1 TN": "rotetest1_tns",
+        "Rote Test 2 Ability": "rotetest2_ability",
+        "Rote Test 2 Focus": "rotetest2_focus",
+        "Rote Test 2 TN": "rotetest2_tns",
+        "Rote Test 3 Ability": "rotetest3_ability",
+        "Rote Test 3 Focus": "rotetest3_focus",
+        "Rote Test 3 TN": "rotetest3_tns",
+        "Trappings 1": "trappings1",
+        "Trappings 2": "trappings2",
+        "Trappings 3": "trappings3",
+        "Effect Description": "effect",
+        "Effect Ability": "effect_ability",
+        "Effect Focus": "effect_focus",
+        "Effect TN": "effect_tn",
+        "Effect Damage": "effect_damage",
+        "Magister Effect Description": "magister_effect",
+        "Magister Effect Ability": "magister_effect_ability",
+        "Magister Effect Focus": "magister_effect_focus",
+        "Magister Effect TN": "magister_effect_tn",
+        "Magister Effect Damage": "magister_effect_damage",
+        "Doom Description": "doom",
+        "Doom Ability": "doom_ability",
+        "Doom Focus": "doom_focus",
+        "Doom TN": "doom_tn",
+        "Doom Damage": "doom_damage"
+      };
+      const artifactToAttrs = {
+        "name": "artifact_name",
+        "Alienation Test Type": "alienation_test_type",
+        "Alienation Test TN": "alienation_test_tn",
+        "Activation": "activation",
+        "Effects": "effects",
+        "Consequences": "consequences"
+      };
+      const dangerousTextToAttrs = {
+        "name": "text_name",
+        "Language": "languages",
+        "Decipher": "decipher",
+        "Decipher Ability": "deciphertest_ability",
+        "Decipher Focus": "deciphertest_focus",
+        "Decipher TN": "deciphertest_tn",
+        "Alienation Test Type": "alienation_test_type",
+        "Alienation Test TN": "alienation_test_tn",
+        "Artifice Workings": "artifice_workings",
+        "Geometry Workings": "geometry_workings",
+        "Morphics Workings": "morphics_workings",
+        "Ontics Workings": "ontics_workings",
+        "Outsiders Workings": "outsiders_workings"
+      };
+      const socialClassToAttrs = {
+        "name": "social-class"
+      };
+	  const arcanumToAttrs = {
+		"name": "spell-name",
+		"Test": "spell-test",
+		" TN": "spell-tn",
+		"Arcana": "spell-talent",
+		"Time ": "spell-time",
+		"Fatigue": "spell-fatigue",
+		//"Short Description": "short-spell-description"
+		"Description": "full-spell-description",
+		"Resistance": "spell-resistance"
+	  };
+
+      var newAttrs = {};
+      if (drop_category === "Dangerous Texts") {
+        var newRowId = generateRowID();
+        newAttrs = _.inject(dangerousTextToAttrs, function(attrs, attr_name, compendium_name) {
+          attrs[`repeating_dangeroustexts_${newRowId}_${attr_name}`] = dropDataParsed[compendium_name];
+          return attrs;
+        }, {});
+      }
+      if (drop_category === "Eldritch Workings") {
+        var newRowId = generateRowID();
+        newAttrs = _.inject(eldritchWorkingToAttrs, function(attrs, attr_name, compendium_name) {
+          attrs[`repeating_eldritchworkings_${newRowId}_${attr_name}`] = dropDataParsed[compendium_name];
+          return attrs;
+        }, {});
+      }
+      if (drop_category === "Artifacts") {
+        var newRowId = generateRowID();
+        newAttrs = _.inject(artifactToAttrs, function(attrs, attr_name, compendium_name) {
+          attrs[`repeating_artifacts_${newRowId}_${attr_name}`] = dropDataParsed[compendium_name];
+          return attrs;
+        }, {});
+      }
+      if (drop_category === "Specializations") {
+        var newRowId = generateRowID();
+        newAttrs = _.inject(specializationToAttrs, function(attrs, attr_name, compendium_name) {
+          attrs[`repeating_talent_${newRowId}_${attr_name}`] = dropDataParsed[compendium_name];
+          return attrs;
+        }, {});
+      }
+      if (drop_category === "Talents Descriptions") {
+        var newRowId = generateRowID();
+        newAttrs = _.inject(talentToAttrs, function(attrs, attr_name, compendium_name) {
+          attrs[`repeating_talent_${newRowId}_${attr_name}`] = dropDataParsed[compendium_name];
+          return attrs;
+        }, {});
+      }
+      if (drop_category === "Psychic Disciplines") {
+        var newRowId = generateRowID();
+        newAttrs = _.inject(psychicDisciplineToAttrs, function(attrs, attr_name, compendium_name) {
+          attrs[`repeating_spell_${newRowId}_${attr_name}`] = dropDataParsed[compendium_name];
+          return attrs;
+        }, {});
+      }
+	  if (drop_category === "Arcana Descriptions") {
+        var newRowId = generateRowID();
+        newAttrs = _.inject(arcanumToAttrs, function(attrs, attr_name, compendium_name) {
+          attrs[`repeating_spell_${newRowId}_${attr_name}`] = dropDataParsed[compendium_name];
+          return attrs;
+        }, {});
+      }
+      if (drop_category === "Equipment") {
+        var newRowId = generateRowID();
+        newAttrs = _.inject(gearToAttrs, function(attrs, attr_name, compendium_name) {
+          attrs[`repeating_equipment_${newRowId}_${attr_name}`] = dropDataParsed[compendium_name] || "";
+          return attrs;
+        }, {});
+      }
+      if (drop_category === "Weapons") {
+        var newRowId = generateRowID();
+        newAttrs = _.inject(weaponToAttrs, function(attrs, attr_name, compendium_name) {
+          attrs[`repeating_attack-list_${newRowId}_${attr_name}`] = dropDataParsed[compendium_name];
+          return attrs;
+        }, {});
+      }
+	  if (drop_category === "Armor") {
+		var newRowId = generateRowID();
+		newAttrs = _.inject(armorToAttrs, function(attrs, attr_name, compendium_name) {
+			attrs[`repeating_armor-list_${newRowId}_${attr_name}`] = dropDataParsed[compendium_name] || "";
+			return attrs;
+		}, {})
+	  }
+	  if (drop_category === "Shields") {
+        var newRowId = generateRowID();
+        newAttrs = _.inject(weaponToAttrs, function(attrs, attr_name, compendium_name) {
+          attrs[`repeating_shield-list_${newRowId}_${attr_name}`] = dropDataParsed[compendium_name];
+          return attrs;
+        }, {});
+      }
+      if (drop_category === "Backgrounds") {
+        // TODO also increment ability
+        newAttrs = _.inject(backgroundToAttrs, function(attrs, attr_name, compendium_name) {
+          attrs[attr_name] = dropDataParsed[compendium_name];
+          return attrs;
+        }, {});
+      }
+      if (drop_category === "Social Classes") {
+        newAttrs = _.inject(socialClassToAttrs, function(attrs, attr_name, compendium_name) {
+          attrs[attr_name] = dropDataParsed[compendium_name];
+          return attrs;
+        }, {});
+      }
+      if (drop_category === "Professions" || drop_category === "Eldritch Professions") {
+        // TODO also increment health, bonds or resources
+        newAttrs = _.inject(professionToAttrs, function(attrs, attr_name, compendium_name) {
+          attrs[attr_name] = dropDataParsed[compendium_name];
+          return attrs;
+        }, {});
+      }
+      if (drop_category === "Focuses") {
+        var newRowId = generateRowID();
+        var repeatingSection = dropDataParsed["Ability"].toLowerCase();
+        newAttrs = _.inject(focusToAttrs, function(attrs, attr_name, compendium_name) {
+          attrs[`repeating_${repeatingSection}-focus_${newRowId}_${attr_name}`] = dropDataParsed[compendium_name];
+          return attrs;
+        }, {});
+      }
+      Object.keys(newAttrs).forEach(key => newAttrs[key] === undefined ? delete newAttrs[key] : {});
+      newAttrs["drop_category"] = "";
+      newAttrs["drop_name"] = "";
+      newAttrs["drop_data"] = "";
+      console.log("New attrs: ", newAttrs);
+      setAttrs(newAttrs);
+    });
+  });
+  console.log("Drop And Drop Script Import Complete");
 </script>
-
-
